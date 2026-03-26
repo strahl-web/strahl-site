@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>STRAHL | Protótipo — Home · Linha Cekton · Datasheet 3076/CK</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- ══════════════ SHARED HEADER ══════════════ -->
+<header>
+  <div class="nav-inner">
+    <div class="brand" onclick="goTo('home')"><img src="assets/images/logo_strahl.png" alt="STRAHL" class="brand-logo"></div>
+    <nav>
+      <div class="nav-dropdown">
+        <span class="nav-link active" id="nav-plugues" onclick="toggleDropdown(event)">
+          Tomadas e Plugues <span class="material-symbols-outlined nav-arrow" style="font-size:18px;vertical-align:middle;">expand_more</span>
+        </span>
+        <div class="dropdown-panel">
+          <a onclick="goTo('cekton')" class="active-sub" href="javascript:void(0)">Linha Cekton</a>
+          <a href="#">Linha Storm Block</a>
+          <a href="#">Linha Mining Block</a>
+          <a href="#">Linha Schuko</a>
+        </div>
+      </div>
+      <span class="nav-link" onclick="#">Unidades Combinadas</span>
+      <span class="nav-link" onclick="#">Centros de Medição</span>
+      <span class="nav-link" onclick="#">Quadros de Distribuição</span>
+      <span class="nav-link" onclick="#">Sobre Nós</span>
+      <span class="nav-link" onclick="#">Contato</span>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-phone" href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">call</span>
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span>
+        11 2818-3838
+      </a>
+      <span class="material-symbols-outlined" style="font-size:22px;color:var(--navy);cursor:pointer">shopping_cart</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ PAGE: HOME ══════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Desde 1986</div>
+        <h1>Engenharia<br>de produto<br><span>para alta<br>performance.</span></h1>
+        <p>Líder nacional em soluções elétricas industriais. Robustez técnica e inovação constante para os projetos mais exigentes do mercado.</p>
+        <div class="hero-buttons">
+          <button class="btn-primary">VER CATÁLOGO TÉCNICO <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></button>
+          <button class="btn-secondary">FALAR COM UM ESPECIALISTA</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-product-card">
+          <img src="assets/images/alta_corrente_frente.jpg" alt="Plugue industrial STRAHL">
+          <div class="hero-badge-bottom">
+            <div>
+              <div class="label">Destaque</div>
+              <div class="title">Plugue e Tomada Série Alta Corrente</div>
+            </div>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORS -->
+  <section class="py-section" style="background:var(--gray-bg)">
+    <div class="container">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px">
+        <div>
+          <div class="section-label">Setores de Atuação</div>
+          <div class="section-title">Infraestrutura para<br>todos os setores</div>
+        </div>
+        <p style="font-size:13px;color:var(--text-muted);max-width:260px">Desenvolvemos componentes certificados para ambientes críticos e uso intensivo.</p>
+      </div>
+      <div class="sectors-grid">
+        <div class="sector-card">
+          <img src="assets/images/industria.jpg" alt="Indústria">
+          <div class="sector-overlay"></div>
+          <div class="sector-content">
+            <div class="sector-icon">🏭</div>
+            <h3>Para Indústria</h3>
+            <p>Soluções robustas para plantas fabris, mineração e óleo e gás.</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <img src="assets/images/construcao_civil.jpg" alt="Construção Civil">
+          <div class="sector-overlay"></div>
+          <div class="sector-content">
+            <div class="sector-icon">🏗️</div>
+            <h3>Para Construção Civil</h3>
+            <p>Agilidade e segurança para grandes obras e infraestrutura urbana.</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <img src="assets/images/residencial.jpg" alt="Comercial e Residencial">
+          <div class="sector-overlay"></div>
+          <div class="sector-content">
+            <div class="sector-icon">🏢</div>
+            <h3>Comercial e Residencial</h3>
+            <p>Segurança técnica para comércios, residências, condomínios, entre outros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="py-section about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="assets/images/fachada_strahl.jpg" alt="Sede STRAHL">
+          <div class="years-badge">
+            <div class="num">40+</div>
+            <div class="lbl">Anos de Experiência</div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Expertise Técnica</div>
+          <div class="section-title">Quem somos</div>
+          <p style="color:var(--text-muted);font-size:15px;line-height:1.7;margin-bottom:28px">A STRAHL é referência nacional no desenvolvimento de materiais elétricos de alta qualidade. Desde 1986, investimos em tecnologia de ponta e processos rigorosos de certificação para garantir que cada componente que sai de nossa fábrica supere os padrões internacionais de segurança.</p>
+          <div class="about-certs">
+            <div class="cert-item">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">verified</span>
+              <div>
+                <h4>Certificação ISO 9001</h4>
+                <p>Gestão de qualidade internacional.</p>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">security</span>
+              <div>
+                <h4>Normas ABNT</h4>
+                <p>Total conformidade com leis locais.</p>
+              </div>
+            </div>
+          </div>
+          <span class="about-link">CONHEÇA NOSSA HISTÓRIA <span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CATEGORIES -->
+  <section class="py-section categories-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-title" style="margin-bottom:8px">Categorias de Produtos</div>
+        <div style="width:56px;height:3px;background:var(--red);margin:0 auto"></div>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card" onclick="goTo('cekton')">
+          <div class="cat-card-img">
+            <img src="assets/images/tomadas_plugues.jpg" alt="Tomadas e Plugues">
+          </div>
+          <div class="cat-label">Proteção e Comando</div>
+          <h3>Tomadas e Plugues</h3>
+          <p>Linha completa industrial com vedações especiais e alta resistência térmica.</p>
+          <div class="explore">EXPLORAR <span class="material-symbols-outlined" style="font-size:16px">east</span></div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-img">
+            <img src="assets/images/centros_medicao.jpg" alt="Centros de Medição">
+          </div>
+          <div class="cat-label">Distribuição</div>
+          <h3>Centros de Medição</h3>
+          <p>Soluções padronizadas para concessionárias de energia em todo o Brasil.</p>
+          <div class="explore">EXPLORAR <span class="material-symbols-outlined" style="font-size:16px">east</span></div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-img">
+            <img src="assets/images/quadros_distribuicao.jpg" alt="Quadros de Distribuição">
+          </div>
+          <div class="cat-label">Componentes</div>
+          <h3>Quadros de Distribuição</h3>
+          <p>Quadros em policarbonato e metálicos com alto grau de proteção IK.</p>
+          <div class="explore">EXPLORAR <span class="material-symbols-outlined" style="font-size:16px">east</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL -->
+  <section class="py-section tech-section">
+    <div class="container">
+      <div class="tech-grid">
+        <div>
+          <div class="section-label" style="color:var(--red)">Informação Técnica</div>
+          <div class="section-title" style="color:var(--white);font-size:48px">Proteção que<br>você pode medir.</div>
+          <div class="tech-cards">
+            <div class="tech-card">
+              <div class="tech-card-head">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">water_drop</span>
+                <h4>IP Rating (Ingress Protection)</h4>
+              </div>
+              <p>Nossos produtos atingem até IP67, garantindo proteção total contra poeira e imersão temporária em água.</p>
+            </div>
+            <div class="tech-card">
+              <div class="tech-card-head">
+                <span class="material-symbols-outlined">gavel</span>
+                <h4>IK Protection (Impact)</h4>
+              </div>
+              <p>Resistência mecânica IK10 para quadros e componentes, suportando impactos severos sem comprometer o funcionamento.</p>
+            </div>
+          </div>
+        </div>
+        <div class="support-card">
+          <h3>Suporte Técnico Especializado</h3>
+          <p>Nossa equipe de engenharia está pronta para auxiliar no dimensionamento e especificação do seu projeto.</p>
+          <div class="form-group">
+            <label class="form-label">Sua Empresa</label>
+            <input class="form-input" placeholder="Nome Fantasia" type="text">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Assunto</label>
+            <select class="form-input">
+              <option>Dimensionamento de Quadros</option>
+              <option>Especificações de Tomadas</option>
+              <option>Orçamento Corporativo</option>
+            </select>
+          </div>
+          <button class="btn-primary" style="width:100%;justify-content:center;margin-top:8px">SOLICITAR CONSULTORIA</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div>
+          <h2>Fique por dentro</h2>
+          <p>Receba atualizações sobre novas normas técnicas e lançamentos Strahl.</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Seu melhor e-mail corporativo">
+          <button>ASSINAR</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo_strahl.png" alt="STRAHL" class="footer-logo logo-white">
+          <p class="footer-desc">Referência em engenharia elétrica de produto desde 1986. Qualidade e inovação para o mercado industrial.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul>
+            <li><a href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><span class="material-symbols-outlined">call</span> 11 2818-3838</a></li>
+            <li><span class="material-symbols-outlined">mail</span> vendas@strahl.com</li>
+            <li><a href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span> WhatsApp (Vendas)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="https://www.strahl.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined">language</span> strahl.com</a></li>
+            <li><a href="https://loja.strahl.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined">storefront</span> lojastrahl.com</a></li>
+            <li>Suporte Técnico</li>
+            <li>Política de Privacidade</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Localização</h4>
+          <ul>
+            <li><span class="material-symbols-outlined">location_on</span> São Paulo, SP — Brasil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Materiais Elétricos STRAHL. Todos os direitos reservados.</div>
+  </footer>
+
+</div><!-- /page-home -->
+
+
+<!-- ══════════════ PAGE: LINHA CEKTON ══════════════ -->
+<div class="page" id="page-cekton">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <span onclick="goTo('home')">Home</span>
+      <span class="sep">/</span>
+      <span>Tomadas e Plugues</span>
+      <span class="sep">/</span>
+      <span class="current">Linha Cekton</span>
+    </div>
+  </div>
+
+  <!-- LINHA HERO -->
+  <div class="linha-hero">
+    <div class="linha-hero-bg">
+      <img src="assets/images/fachada_strahl.jpg" alt="">
+    </div>
+    <div class="container">
+      <div class="linha-hero-inner">
+        <div>
+          <div class="serie-tag">Série Profissional · Tomadas e Plugues Industriais</div>
+          <h1>Linha<br><span>Cekton</span></h1>
+          <p class="desc">A linha Cekton de plugues e tomadas industriais oferece segurança e durabilidade em ambientes severos. Desenvolvidos sob normas internacionais para garantir conexões precisas e confiáveis.</p>
+        </div>
+        <div class="linha-hero-img">
+          <div class="linha-hero-img-card">
+            <img src="assets/images/banner_cekton.jpg" alt="Linha Cekton — Plugues e Tomadas Industriais STRAHL">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPONENTS STRIP -->
+  <div class="components-strip">
+    <div class="container">
+      <div class="comp-strip-inner">
+        <div class="comp-item">
+          <span class="comp-num">01</span>
+          <div>
+            <div class="comp-lbl">Pino Terra</div>
+          </div>
+        </div>
+        <div style="width:1px;height:40px;background:var(--gray-border)"></div>
+        <div class="comp-item">
+          <span class="comp-num">02</span>
+          <div>
+            <div class="comp-lbl">Carcaça Nylon 6.6</div>
+          </div>
+        </div>
+        <div style="width:1px;height:40px;background:var(--gray-border)"></div>
+        <div class="comp-item">
+          <span class="comp-num">03</span>
+          <div>
+            <div class="comp-lbl">Trava de Segurança</div>
+          </div>
+        </div>
+        <div style="width:1px;height:40px;background:var(--gray-border)"></div>
+        <div class="comp-item">
+          <span class="comp-num">04</span>
+          <div>
+            <div class="comp-lbl">Bornes Integrados</div>
+          </div>
+        </div>
+        <div style="width:1px;height:40px;background:var(--gray-border)"></div>
+        <div class="comp-item">
+          <span class="comp-num">05</span>
+          <div>
+            <div class="comp-lbl">Pinos Niquelados</div>
+          </div>
+        </div>
+        <div style="width:1px;height:40px;background:var(--gray-border)"></div>
+        <div class="comp-item">
+          <span class="comp-num">06</span>
+          <div>
+            <div class="comp-lbl">Passa-Cabo Hermético</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIFERENCIAIS TÉCNICOS -->
+  <section class="py-section diferenciais-section">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:48px">
+        <div style="width:4px;height:32px;background:var(--red);border-radius:2px"></div>
+        <div class="section-title" style="margin-bottom:0">Diferenciais Técnicos</div>
+      </div>
+      <div class="dif-grid">
+        <div class="dif-card">
+          <div class="dif-tag"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red)">bolt</span> Design Estrutural</div>
+          <h3>Núcleos Compactos e Bornes Integrados</h3>
+          <p>Design estrutural otimizado com terminais integrados que garantem menor resistência de contato e máxima eficiência térmica, facilitando a montagem técnica rápida.</p>
+          <div class="dif-tags-row">
+            <span class="dif-pill">Bornes de Parafuso</span>
+            <span class="dif-pill">Nylon 6.6</span>
+          </div>
+        </div>
+        <div class="dif-card highlight">
+          <div class="dif-tag"><span class="material-symbols-outlined" style="font-size:16px;color:rgba(255,255,255,.70)">shield</span> Proteção Superficial</div>
+          <h3>Proteção Nickel-Plated</h3>
+          <p>Pinos niquelados para máxima resistência à corrosão e oxidação, ideal para atmosferas agressivas.</p>
+          <div class="dif-tags-row">
+            <span class="dif-pill">Resistência Industrial</span>
+          </div>
+        </div>
+        <div class="dif-card">
+          <div class="dif-tag"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red)">water_drop</span> Vedação</div>
+          <h3>Passa Cabo Hermético</h3>
+          <p>Sistema de prensa-cabo integrado com vedação elastomérica, prevenindo a entrada de poeira e umidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTION TABLE IP44 -->
+  <section class="py-section selection-section">
+    <div class="container">
+
+      <!-- IP44 BLOCK -->
+      <div class="ip-block">
+        <div class="ip-header">
+          <div>
+            <h3>Seleção de Plugues IP44</h3>
+            <p>Proteção padrão (sólidos &gt; 1,0mm e respingos)</p>
+          </div>
+          <div class="ip-badge">Standard Protection</div>
+        </div>
+
+        <!-- 16A -->
+        <div class="ampere-block">
+          <div class="ampere-label">Versão 16A</div>
+          <table class="sel-table">
+            <thead>
+              <tr>
+                <th>Polos</th>
+                <th><span class="v-violet">24V</span></th>
+                <th><span class="v-yellow">110/130V</span></th>
+                <th><span class="v-blue">200/250V</span></th>
+                <th><span class="v-red">380/415V</span></th>
+                <th><span class="v-black">480/500V</span></th>
+                <th><span class="v-red">440/460V</span></th>
+                <th><span class="v-black">600/690V</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3 (2P+T)</td>
+                <td><a class="sku" href="#">3072/CK</a></td>
+                <td><a class="sku" href="#">3074/CK</a></td>
+                <td><a class="sku featured" href="javascript:void(0)" onclick="goTo('datasheet')">3076/CK</a></td>
+                <td><a class="sku" href="#">3079/CK</a></td>
+                <td><a class="sku" href="#">3077/CK</a></td>
+                <td><a class="sku" href="#">30711/CK</a></td>
+                <td><a class="sku" href="#">3075/CK</a></td>
+              </tr>
+<tr>
+                <td>4 (3P+T)</td>
+                <td><a class="sku" href="#">4072/CK</a></td>
+                <td><a class="sku" href="#">4074/CK</a></td>
+                <td><a class="sku featured" href="javascript:void(0)" onclick="goTo('datasheet-4079')">4079/CK</a></td>
+                <td><a class="sku" href="#">4076/CK</a></td>
+                <td><a class="sku" href="#">4077/CK</a></td>
+                <td><a class="sku" href="#">40711/CK</a></td>
+                <td><a class="sku" href="#">4075/CK</a></td>
+              </tr>
+<tr>
+                <td>5 (3P+N+T)</td>
+                <td><a class="sku" href="#">5072/CK</a></td>
+                <td><a class="sku" href="#">5074/CK</a></td>
+                <td><a class="sku" href="#">5079/CK</a></td>
+                <td><a class="sku" href="#">5076/CK</a></td>
+                <td><a class="sku" href="#">5077/CK</a></td>
+                <td><a class="sku" href="#">50711/CK</a></td>
+                <td><a class="sku" href="#">5075/CK</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 32A -->
+        <div class="ampere-block">
+          <div class="ampere-label">Versão 32A</div>
+          <table class="sel-table">
+            <thead>
+              <tr>
+                <th>Polos</th>
+                <th><span class="v-violet">24V</span></th>
+                <th><span class="v-yellow">110/130V</span></th>
+                <th><span class="v-blue">200/250V</span></th>
+                <th><span class="v-red">380/415V</span></th>
+                <th><span class="v-black">480/500V</span></th>
+                <th><span class="v-red">440/460V</span></th>
+                <th><span class="v-black">600/690V</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3 (2P+T)</td>
+                <td><a class="sku" href="#">3272/CK</a></td>
+                <td><a class="sku" href="#">3274/CK</a></td>
+                <td><a class="sku" href="#">3276/CK</a></td>
+                <td><a class="sku" href="#">3279/CK</a></td>
+                <td><a class="sku" href="#">3277/CK</a></td>
+                <td><a class="sku" href="#">32711/CK</a></td>
+                <td><a class="sku" href="#">3275/CK</a></td>
+              </tr>
+<tr>
+                <td>4 (3P+T)</td>
+                <td><a class="sku" href="#">4272/CK</a></td>
+                <td><a class="sku" href="#">4274/CK</a></td>
+                <td><a class="sku" href="#">4279/CK</a></td>
+                <td><a class="sku" href="#">4276/CK</a></td>
+                <td><a class="sku" href="#">4277/CK</a></td>
+                <td><a class="sku" href="#">42711/CK</a></td>
+                <td><a class="sku" href="#">4275/CK</a></td>
+              </tr>
+<tr>
+                <td>5 (3P+N+T)</td>
+                <td><a class="sku" href="#">5272/CK</a></td>
+                <td><a class="sku" href="#">5274/CK</a></td>
+                <td><a class="sku" href="#">5279/CK</a></td>
+                <td><a class="sku" href="#">5276/CK</a></td>
+                <td><a class="sku" href="#">5277/CK</a></td>
+                <td><a class="sku" href="#">52711/CK</a></td>
+                <td><a class="sku" href="#">5275/CK</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- IP67 BLOCK -->
+      <div class="ip-block">
+        <div class="ip-header">
+          <div>
+            <h3>Seleção de Plugues IP67</h3>
+            <p>Vedação total (imersão temporária e atmosferas críticas)</p>
+          </div>
+          <div class="ip-badge red">High Seal Protection</div>
+        </div>
+
+        <!-- 63A -->
+        <div class="ampere-block">
+          <div class="ampere-label">Versão 63A</div>
+          <table class="sel-table">
+            <thead>
+              <tr>
+                <th>Polos</th>
+                <th><span class="v-violet">24V</span></th>
+                <th><span class="v-yellow">110/130V</span></th>
+                <th><span class="v-blue">200/250V</span></th>
+                <th><span class="v-red">380/415V</span></th>
+                <th><span class="v-black">480/500V</span></th>
+                <th><span class="v-red">440/460V</span></th>
+                <th><span class="v-black">600/690V</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3 (2P+T)</td>
+                <td><a class="sku" href="#">3572/CK</a></td>
+                <td><a class="sku" href="#">3574/CK</a></td>
+                <td><a class="sku" href="#">3579/CK</a></td>
+                <td><a class="sku" href="#">3576/CK</a></td>
+                <td><a class="sku" href="#">3577/CK</a></td>
+                <td><a class="sku" href="#">35711/CK</a></td>
+                <td><a class="sku" href="#">3575/CK</a></td>
+              </tr>
+<tr>
+                <td>4 (3P+T)</td>
+                <td><a class="sku" href="#">4572/CK</a></td>
+                <td><a class="sku" href="#">4574/CK</a></td>
+                <td><a class="sku" href="#">4579/CK</a></td>
+                <td><a class="sku" href="#">4576/CK</a></td>
+                <td><a class="sku" href="#">4577/CK</a></td>
+                <td><a class="sku" href="#">45711/CK</a></td>
+                <td><a class="sku" href="#">4575/CK</a></td>
+              </tr>
+<tr>
+                <td>5 (3P+N+T)</td>
+                <td><a class="sku" href="#">5572/CK</a></td>
+                <td><a class="sku" href="#">5574/CK</a></td>
+                <td><a class="sku" href="#">5579/CK</a></td>
+                <td><a class="sku" href="#">5576/CK</a></td>
+                <td><a class="sku" href="#">5577/CK</a></td>
+                <td><a class="sku" href="#">55711/CK</a></td>
+                <td><a class="sku" href="#">5575/CK</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 125A -->
+        <div class="ampere-block">
+          <div class="ampere-label">Versão 125A</div>
+          <table class="sel-table">
+            <thead>
+              <tr>
+                <th>Polos</th>
+                <th><span class="v-violet">24V</span></th>
+                <th><span class="v-yellow">110/130V</span></th>
+                <th><span class="v-blue">200/250V</span></th>
+                <th><span class="v-red">380/415V</span></th>
+                <th><span class="v-black">480/500V</span></th>
+                <th><span class="v-red">440/460V</span></th>
+                <th><span class="v-black">600/690V</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3 (2P+T)</td>
+                <td><a class="sku" href="#">3672/CK</a></td>
+                <td><a class="sku" href="#">3674/CK</a></td>
+                <td><a class="sku" href="#">3676/CK</a></td>
+                <td><a class="sku" href="#">3679/CK</a></td>
+                <td><a class="sku" href="#">3677/CK</a></td>
+                <td><a class="sku" href="#">36711/CK</a></td>
+                <td><a class="sku" href="#">3275/CK</a></td>
+              </tr>
+<tr>
+                <td>4 (3P+T)</td>
+                <td><a class="sku" href="#">4672/CK</a></td>
+                <td><a class="sku" href="#">4674/CK</a></td>
+                <td><a class="sku" href="#">4676/CK</a></td>
+                <td><a class="sku" href="#">4679/CK</a></td>
+                <td><a class="sku" href="#">4677/CK</a></td>
+                <td><a class="sku" href="#">46711/CK</a></td>
+                <td><a class="sku" href="#">4675/CK</a></td>
+              </tr>
+<tr>
+                <td>5 (3P+N+T)</td>
+                <td><a class="sku" href="#">5672/CK</a></td>
+                <td><a class="sku" href="#">5674/CK</a></td>
+                <td><a class="sku" href="#">5676/CK</a></td>
+                <td><a class="sku" href="#">5679/CK</a></td>
+                <td><a class="sku" href="#">5677/CK</a></td>
+                <td><a class="sku" href="#">56711/CK</a></td>
+                <td><a class="sku" href="#">5675/CK</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 200A -->
+        <div class="ampere-block">
+          <div class="ampere-label">Versão 200A</div>
+          <table class="sel-table">
+            <thead>
+              <tr>
+                <th>Polos</th>
+                <th><span class="v-violet">24V</span></th>
+                <th><span class="v-yellow">110/130V</span></th>
+                <th><span class="v-blue">200/250V</span></th>
+                <th><span class="v-red">380/415V</span></th>
+                <th><span class="v-black">480/500V</span></th>
+                <th><span class="v-red">440/460V</span></th>
+                <th><span class="v-black">600/690V</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3 (2P+T)</td>
+                <td><a class="sku" href="#">3872/CK</a></td>
+                <td><a class="sku" href="#">3874/CK</a></td>
+                <td><a class="sku" href="#">3879/CK</a></td>
+                <td><a class="sku" href="#">3876/CK</a></td>
+                <td><a class="sku" href="#">3877/CK</a></td>
+                <td><a class="sku" href="#">38711/CK</a></td>
+                <td><a class="sku" href="#">3875/CK</a></td>
+              </tr>
+<tr>
+                <td>4 (3P+T)</td>
+                <td><a class="sku" href="#">4872/CK</a></td>
+                <td><a class="sku" href="#">4874/CK</a></td>
+                <td><a class="sku" href="#">4879/CK</a></td>
+                <td><a class="sku" href="#">4876/CK</a></td>
+                <td><a class="sku" href="#">4877/CK</a></td>
+                <td><a class="sku" href="#">48711/CK</a></td>
+                <td><a class="sku" href="#">4875/CK</a></td>
+              </tr>
+<tr>
+                <td>5 (3P+N+T)</td>
+                <td><a class="sku" href="#">5872/CK</a></td>
+                <td><a class="sku" href="#">5874/CK</a></td>
+                <td><a class="sku" href="#">5879/CK</a></td>
+                <td><a class="sku" href="#">5876/CK</a></td>
+                <td><a class="sku" href="#">5877/CK</a></td>
+                <td><a class="sku" href="#">58711/CK</a></td>
+                <td><a class="sku" href="#">5875/CK</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p style="font-size:11px;color:var(--text-light);margin-top:8px">* Clique em um código para acessar o datasheet. Células em vermelho possuem datasheet disponível.</p>
+    </div>
+  </section>
+
+  <!-- DIMENSIONS -->
+  <section class="py-section dims-section">
+    <div class="container">
+      <div class="section-title">Dimensões Técnicas</div>
+
+      <!-- Technical Drawing Block -->
+      <div style="background:var(--white);border:1px solid var(--gray-border);border-radius:8px;padding:40px 48px;margin-bottom:40px;">
+        <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" font-family="Barlow Condensed,sans-serif">
+
+          <!-- ══ COLUMN TITLES ══ -->
+          <text x="150" y="30" text-anchor="middle" font-size="22" font-weight="400" fill="#1b1c1c" font-family="Barlow,sans-serif">16A e 32A</text>
+          <text x="450" y="30" text-anchor="middle" font-size="22" font-weight="400" fill="#1b1c1c" font-family="Barlow,sans-serif">63A</text>
+          <text x="750" y="30" text-anchor="middle" font-size="22" font-weight="400" fill="#1b1c1c" font-family="Barlow,sans-serif">125A e 200A</text>
+
+          <!-- ════════════════════════════════════
+               COLUMN 1 — 16A e 32A
+               TOP VIEW (frontal) + SIDE VIEW
+          ════════════════════════════════════ -->
+
+          <!-- TOP VIEW 16A/32A -->
+          <!-- cota e (diâmetro topo) -->
+          <line x1="100" y1="55" x2="200" y2="55" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="100,52 100,58 93,55" fill="#1b1c1c"/>
+          <polygon points="200,52 200,58 207,55" fill="#1b1c1c"/>
+          <text x="150" y="51" text-anchor="middle" font-size="13" fill="#1b1c1c">e</text>
+          <!-- vertical ref lines for e -->
+          <line x1="100" y1="50" x2="100" y2="66" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="200" y1="50" x2="200" y2="66" stroke="#1b1c1c" stroke-width="0.8"/>
+
+          <!-- plug body top view: trapezoid shape -->
+          <!-- top cap (threaded cable entry) -->
+          <rect x="120" y="63" width="62" height="22" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <!-- hatching lines on top cap -->
+          <line x1="126" y1="63" x2="126" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="132" y1="63" x2="132" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="138" y1="63" x2="138" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="144" y1="63" x2="144" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="150" y1="63" x2="150" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="156" y1="63" x2="156" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="162" y1="63" x2="162" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="168" y1="63" x2="168" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="174" y1="63" x2="174" y2="85" stroke="#888" stroke-width="0.7"/>
+          <!-- center line vertical -->
+          <line x1="151" y1="60" x2="151" y2="200" stroke="#1b1c1c" stroke-width="0.6" stroke-dasharray="6,3"/>
+          <!-- locking ring -->
+          <rect x="112" y="85" width="78" height="14" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <!-- main body tapered -->
+          <path d="M118,99 L118,165 L135,178 L151,182 L167,178 L184,165 L184,99 Z" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <!-- small rectangle detail (slot) on body -->
+          <rect x="143" y="128" width="16" height="24" rx="1" fill="none" stroke="#1b1c1c" stroke-width="1.2"/>
+          <!-- face cone outline -->
+          <path d="M118,99 Q118,93 151,91 Q184,93 184,99" fill="none" stroke="#1b1c1c" stroke-width="1.2"/>
+
+          <!-- cota k (width at base) -->
+          <line x1="135" y1="188" x2="167" y2="188" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="135,185 135,191 128,188" fill="#1b1c1c"/>
+          <polygon points="167,185 167,191 174,188" fill="#1b1c1c"/>
+          <line x1="135" y1="180" x2="135" y2="192" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="167" y1="180" x2="167" y2="192" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="151" y="202" text-anchor="middle" font-size="13" fill="#1b1c1c">k</text>
+
+          <!-- SIDE VIEW 16A/32A -->
+          <!-- cota L (left side) -->
+          <line x1="90" y1="230" x2="90" y2="420" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="87,230 93,230 90,223" fill="#1b1c1c"/>
+          <polygon points="87,420 93,420 90,427" fill="#1b1c1c"/>
+          <line x1="88" y1="230" x2="115" y2="230" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="88" y1="420" x2="115" y2="420" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="82" y="328" text-anchor="middle" font-size="13" fill="#1b1c1c">L</text>
+
+          <!-- cota g (inner body) -->
+          <line x1="102" y1="253" x2="102" y2="420" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="99,253 105,253 102,246" fill="#1b1c1c"/>
+          <polygon points="99,420 105,420 102,427" fill="#1b1c1c"/>
+          <line x1="100" y1="253" x2="122" y2="253" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="94" y="360" text-anchor="middle" font-size="13" fill="#1b1c1c">g</text>
+
+          <!-- side body: cable gland top -->
+          <rect x="120" y="230" width="62" height="24" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <line x1="126" y1="230" x2="126" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="133" y1="230" x2="133" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="140" y1="230" x2="140" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="147" y1="230" x2="147" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="154" y1="230" x2="154" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="161" y1="230" x2="161" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="168" y1="230" x2="168" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="175" y1="230" x2="175" y2="254" stroke="#888" stroke-width="0.7"/>
+          <!-- locking ring side -->
+          <rect x="112" y="254" width="78" height="13" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <!-- main tapered body side -->
+          <path d="M122,267 L115,340 L122,380 L151,395 L180,380 L187,340 L180,267 Z" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <!-- center dashed line -->
+          <line x1="151" y1="225" x2="151" y2="440" stroke="#1b1c1c" stroke-width="0.6" stroke-dasharray="6,3"/>
+          <!-- lug/tab at bottom -->
+          <path d="M130,395 L125,418 L140,420 L140,395" fill="none" stroke="#1b1c1c" stroke-width="1.3"/>
+          <!-- face at bottom of body -->
+          <line x1="115" y1="267" x2="187" y2="267" stroke="#1b1c1c" stroke-width="1"/>
+
+          <!-- ════════════════════════════════════
+               COLUMN 2 — 63A
+          ════════════════════════════════════ -->
+
+          <!-- TOP VIEW 63A (similar but slightly wider) -->
+          <line x1="400" y1="55" x2="500" y2="55" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="400,52 400,58 393,55" fill="#1b1c1c"/>
+          <polygon points="500,52 500,58 507,55" fill="#1b1c1c"/>
+          <text x="450" y="51" text-anchor="middle" font-size="13" fill="#1b1c1c">e</text>
+          <line x1="400" y1="50" x2="400" y2="66" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="500" y1="50" x2="500" y2="66" stroke="#1b1c1c" stroke-width="0.8"/>
+
+          <line x1="450" y1="60" x2="450" y2="200" stroke="#1b1c1c" stroke-width="0.6" stroke-dasharray="6,3"/>
+          <rect x="420" y="63" width="62" height="22" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <line x1="426" y1="63" x2="426" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="432" y1="63" x2="432" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="438" y1="63" x2="438" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="444" y1="63" x2="444" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="450" y1="63" x2="450" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="456" y1="63" x2="456" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="462" y1="63" x2="462" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="468" y1="63" x2="468" y2="85" stroke="#888" stroke-width="0.7"/>
+          <line x1="474" y1="63" x2="474" y2="85" stroke="#888" stroke-width="0.7"/>
+          <rect x="412" y="85" width="78" height="14" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <path d="M418,99 L418,165 L435,178 L450,182 L465,178 L482,165 L482,99 Z" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <rect x="442" y="128" width="16" height="24" rx="1" fill="none" stroke="#1b1c1c" stroke-width="1.2"/>
+          <path d="M418,99 Q418,93 450,91 Q482,93 482,99" fill="none" stroke="#1b1c1c" stroke-width="1.2"/>
+
+          <line x1="435" y1="188" x2="465" y2="188" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="435,185 435,191 428,188" fill="#1b1c1c"/>
+          <polygon points="465,185 465,191 472,188" fill="#1b1c1c"/>
+          <line x1="435" y1="180" x2="435" y2="192" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="465" y1="180" x2="465" y2="192" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="450" y="202" text-anchor="middle" font-size="13" fill="#1b1c1c">k</text>
+
+          <!-- SIDE VIEW 63A -->
+          <line x1="390" y1="230" x2="390" y2="420" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="387,230 393,230 390,223" fill="#1b1c1c"/>
+          <polygon points="387,420 393,420 390,427" fill="#1b1c1c"/>
+          <line x1="388" y1="230" x2="415" y2="230" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="388" y1="420" x2="415" y2="420" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="382" y="328" text-anchor="middle" font-size="13" fill="#1b1c1c">L</text>
+
+          <line x1="402" y1="253" x2="402" y2="420" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="399,253 405,253 402,246" fill="#1b1c1c"/>
+          <polygon points="399,420 405,420 402,427" fill="#1b1c1c"/>
+          <line x1="400" y1="253" x2="422" y2="253" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="394" y="360" text-anchor="middle" font-size="13" fill="#1b1c1c">g</text>
+
+          <rect x="420" y="230" width="62" height="24" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <line x1="426" y1="230" x2="426" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="433" y1="230" x2="433" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="440" y1="230" x2="440" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="447" y1="230" x2="447" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="454" y1="230" x2="454" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="461" y1="230" x2="461" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="468" y1="230" x2="468" y2="254" stroke="#888" stroke-width="0.7"/>
+          <line x1="475" y1="230" x2="475" y2="254" stroke="#888" stroke-width="0.7"/>
+          <rect x="412" y="254" width="78" height="13" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <path d="M422,267 L415,340 L422,380 L450,395 L478,380 L485,340 L478,267 Z" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <line x1="450" y1="225" x2="450" y2="440" stroke="#1b1c1c" stroke-width="0.6" stroke-dasharray="6,3"/>
+          <path d="M430,395 L425,418 L440,420 L440,395" fill="none" stroke="#1b1c1c" stroke-width="1.3"/>
+          <line x1="415" y1="267" x2="485" y2="267" stroke="#1b1c1c" stroke-width="1"/>
+
+          <!-- ════════════════════════════════════
+               COLUMN 3 — 125A e 200A (taller, with flange)
+          ════════════════════════════════════ -->
+
+          <!-- TOP VIEW 125A/200A — slim neck at top -->
+          <!-- cota e narrow neck -->
+          <line x1="720" y1="55" x2="780" y2="55" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="720,52 720,58 713,55" fill="#1b1c1c"/>
+          <polygon points="780,52 780,58 787,55" fill="#1b1c1c"/>
+          <text x="750" y="51" text-anchor="middle" font-size="13" fill="#1b1c1c">e</text>
+          <line x1="720" y1="50" x2="720" y2="72" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="780" y1="50" x2="780" y2="72" stroke="#1b1c1c" stroke-width="0.8"/>
+
+          <!-- thin neck / pass-cable top -->
+          <rect x="733" y="63" width="34" height="18" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <line x1="750" y1="60" x2="750" y2="215" stroke="#1b1c1c" stroke-width="0.6" stroke-dasharray="6,3"/>
+
+          <!-- flange ring (wider) -->
+          <rect x="710" y="81" width="80" height="16" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <!-- hatching on flange -->
+          <line x1="716" y1="81" x2="716" y2="97" stroke="#888" stroke-width="0.7"/>
+          <line x1="722" y1="81" x2="722" y2="97" stroke="#888" stroke-width="0.7"/>
+          <line x1="728" y1="81" x2="728" y2="97" stroke="#888" stroke-width="0.7"/>
+          <line x1="756" y1="81" x2="756" y2="97" stroke="#888" stroke-width="0.7"/>
+          <line x1="762" y1="81" x2="762" y2="97" stroke="#888" stroke-width="0.7"/>
+          <line x1="768" y1="81" x2="768" y2="97" stroke="#888" stroke-width="0.7"/>
+          <line x1="774" y1="81" x2="774" y2="97" stroke="#888" stroke-width="0.7"/>
+          <line x1="780" y1="81" x2="780" y2="97" stroke="#888" stroke-width="0.7"/>
+
+          <!-- body 125A top view tapered -->
+          <path d="M718,97 L718,160 L733,175 L750,180 L767,175 L782,160 L782,97 Z" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <rect x="741" y="125" width="18" height="26" rx="1" fill="none" stroke="#1b1c1c" stroke-width="1.2"/>
+          <path d="M718,97 Q718,91 750,89 Q782,91 782,97" fill="none" stroke="#1b1c1c" stroke-width="1.2"/>
+
+          <!-- cota k -->
+          <line x1="733" y1="188" x2="767" y2="188" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="733,185 733,191 726,188" fill="#1b1c1c"/>
+          <polygon points="767,185 767,191 774,188" fill="#1b1c1c"/>
+          <line x1="733" y1="180" x2="733" y2="196" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="767" y1="180" x2="767" y2="196" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="750" y="207" text-anchor="middle" font-size="13" fill="#1b1c1c">k</text>
+
+          <!-- SIDE VIEW 125A/200A — taller with flange plate -->
+          <!-- cota e (top, narrow) -->
+          <line x1="720" y1="240" x2="780" y2="240" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="720,237 720,243 713,240" fill="#1b1c1c"/>
+          <polygon points="780,237 780,243 787,240" fill="#1b1c1c"/>
+          <line x1="720" y1="232" x2="720" y2="250" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="780" y1="232" x2="780" y2="250" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="750" y="236" text-anchor="middle" font-size="13" fill="#1b1c1c">e</text>
+
+          <!-- thin neck side view -->
+          <rect x="733" y="248" width="34" height="30" rx="2" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <line x1="750" y1="235" x2="750" y2="510" stroke="#1b1c1c" stroke-width="0.6" stroke-dasharray="6,3"/>
+
+          <!-- flange plate (horizontal wide plate) -->
+          <rect x="698" y="278" width="104" height="16" rx="1" fill="none" stroke="#1b1c1c" stroke-width="1.8"/>
+
+          <!-- cota L (full height) left side -->
+          <line x1="678" y1="248" x2="678" y2="490" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="675,248 681,248 678,241" fill="#1b1c1c"/>
+          <polygon points="675,490 681,490 678,497" fill="#1b1c1c"/>
+          <line x1="676" y1="248" x2="697" y2="248" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="676" y1="490" x2="697" y2="490" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="669" y="372" text-anchor="middle" font-size="13" fill="#1b1c1c">L</text>
+
+          <!-- cota g (from flange down) -->
+          <line x1="690" y1="294" x2="690" y2="490" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="687,294 693,294 690,287" fill="#1b1c1c"/>
+          <polygon points="687,490 693,490 690,497" fill="#1b1c1c"/>
+          <line x1="688" y1="294" x2="700" y2="294" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="681" y="400" text-anchor="middle" font-size="13" fill="#1b1c1c">g</text>
+
+          <!-- main body 125A side tapered (longer) -->
+          <path d="M720,294 L710,380 L716,440 L750,458 L784,440 L790,380 L780,294 Z" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+
+          <!-- bottom connector/cable gland -->
+          <rect x="733" y="458" width="34" height="32" rx="3" fill="none" stroke="#1b1c1c" stroke-width="1.5"/>
+          <line x1="736" y1="458" x2="736" y2="490" stroke="#888" stroke-width="0.7"/>
+          <line x1="742" y1="458" x2="742" y2="490" stroke="#888" stroke-width="0.7"/>
+          <line x1="748" y1="458" x2="748" y2="490" stroke="#888" stroke-width="0.7"/>
+          <line x1="754" y1="458" x2="754" y2="490" stroke="#888" stroke-width="0.7"/>
+          <line x1="760" y1="458" x2="760" y2="490" stroke="#888" stroke-width="0.7"/>
+          <line x1="766" y1="458" x2="766" y2="490" stroke="#888" stroke-width="0.7"/>
+
+          <!-- cota a (width at bottom) -->
+          <line x1="700" y1="502" x2="800" y2="502" stroke="#1b1c1c" stroke-width="1"/>
+          <polygon points="700,499 700,505 693,502" fill="#1b1c1c"/>
+          <polygon points="800,499 800,505 807,502" fill="#1b1c1c"/>
+          <line x1="700" y1="494" x2="700" y2="507" stroke="#1b1c1c" stroke-width="0.8"/>
+          <line x1="800" y1="494" x2="800" y2="507" stroke="#1b1c1c" stroke-width="0.8"/>
+          <text x="750" y="516" text-anchor="middle" font-size="13" fill="#1b1c1c">a</text>
+
+          <!-- lug/tab side 125A -->
+          <path d="M729,440 L724,463 L738,465 L738,440" fill="none" stroke="#1b1c1c" stroke-width="1.3"/>
+
+          <!-- ══ COLUMN DIVIDERS ══ -->
+          <line x1="300" y1="40" x2="300" y2="510" stroke="#d8d7d7" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="600" y1="40" x2="600" y2="510" stroke="#d8d7d7" stroke-width="1" stroke-dasharray="4,4"/>
+
+        </svg>
+      </div>
+
+      <div class="dims-cards">
+        <div class="dims-card">
+          <h4>16A e 32A</h4>
+          <table class="dims-table">
+            <thead><tr><th>IN (A)</th><th>Polos</th><th>E</th><th>G</th><th>L</th><th>K</th></tr></thead>
+            <tbody>
+              <tr><td>16</td><td>3</td><td>43,2</td><td>74,5</td><td>111</td><td>Ø22,0</td></tr>
+              <tr><td>16</td><td>4</td><td>49,5</td><td>74,5</td><td>111</td><td>Ø21,5</td></tr>
+              <tr><td>16</td><td>5</td><td>56,0</td><td>74,5</td><td>111</td><td>Ø21,5</td></tr>
+              <tr><td>32</td><td>3</td><td>57,2</td><td>90,5</td><td>136</td><td>Ø29,5</td></tr>
+              <tr><td>32</td><td>4</td><td>57,2</td><td>90,5</td><td>136</td><td>Ø29,5</td></tr>
+              <tr><td>32</td><td>5</td><td>63,3</td><td>90,5</td><td>137</td><td>Ø29,5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="dims-card">
+          <h4>63A</h4>
+          <table class="dims-table">
+            <thead><tr><th>IN (A)</th><th>Polos</th><th>B</th><th>E</th><th>G</th><th>L</th><th>K</th></tr></thead>
+            <tbody>
+              <tr><td>63</td><td>3</td><td>112</td><td>69,5</td><td>185</td><td>238</td><td>Pg29</td></tr>
+              <tr><td>63</td><td>4</td><td>112</td><td>69,5</td><td>185</td><td>238</td><td>Pg29</td></tr>
+              <tr><td>63</td><td>5</td><td>112</td><td>69,5</td><td>185</td><td>238</td><td>Pg29</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="dims-card">
+          <h4>125A e 200A</h4>
+          <table class="dims-table">
+            <thead><tr><th>IN (A)</th><th>Polos</th><th>B</th><th>E</th><th>G</th><th>L</th><th>K</th></tr></thead>
+            <tbody>
+              <tr><td>125</td><td>3</td><td>130</td><td>81,5</td><td>221</td><td>305</td><td>Pg36</td></tr>
+              <tr><td>125</td><td>4</td><td>130</td><td>81,5</td><td>221</td><td>305</td><td>Pg36</td></tr>
+              <tr><td>125</td><td>5</td><td>130</td><td>81,5</td><td>221</td><td>305</td><td>Pg36</td></tr>
+              <tr><td>200</td><td>3</td><td>130</td><td>81,5</td><td>221</td><td>305</td><td>Pg36</td></tr>
+              <tr><td>200</td><td>4</td><td>130</td><td>81,5</td><td>221</td><td>305</td><td>Pg36</td></tr>
+              <tr><td>200</td><td>5</td><td>130</td><td>81,5</td><td>221</td><td>305</td><td>Pg36</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ IP / IK REFERENCE TABLE ══ -->
+  <section style="background:var(--gray-bg);padding:80px 0;">
+    <div class="container">
+
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
+        <div style="width:4px;height:32px;background:var(--red);border-radius:2px;flex-shrink:0"></div>
+        <div>
+          <div class="section-label" style="margin-bottom:2px">Norma NBR IEC 60529 / IEC 62262</div>
+          <div class="section-title" style="margin-bottom:0">Graus de Proteção IP e IK</div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--text-muted);max-width:680px;margin-bottom:48px;padding-left:20px">Os graus de proteção IP definem a resistência do produto contra sólidos e líquidos. O IK define a resistência a impactos mecânicos. Os dígitos destacados em vermelho indicam o nível adotado na Linha Cekton.</p>
+
+      <!-- ─── BLOCO 1: 1º Algarismo ─── -->
+      <div style="background:var(--white);border-radius:8px;border:1px solid var(--gray-border);overflow:hidden;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,.04)">
+        <!-- header -->
+        <div style="background:var(--navy);padding:14px 28px;display:flex;align-items:baseline;gap:12px;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:var(--white);text-transform:uppercase;letter-spacing:.04em">1º Algarismo</span>
+          <span style="font-size:13px;color:rgba(255,255,255,.60);font-style:italic">Proteção contra penetração de corpos sólidos</span>
+        </div>
+        <!-- grid -->
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);border-bottom:2px solid var(--gray-border);">
+          <!-- digit labels -->
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--text-muted);border-right:1px solid var(--gray-border)">0</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--text-muted);border-right:1px solid var(--gray-border)">1</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--text-muted);border-right:1px solid var(--gray-border)">2</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--text-muted);border-right:1px solid var(--gray-border)">3</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--red);border-right:1px solid var(--gray-border);background:#fff5f4">4</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--text-muted);border-right:1px solid var(--gray-border)">5</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--text-muted)">6</div>
+        </div>
+        <!-- icons row -->
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid var(--gray-border);">
+          <!-- 0 -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="20" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4,3"/><line x1="10" y1="10" x2="42" y2="42" stroke="#ccc" stroke-width="1.5"/></svg>
+          </div>
+          <!-- 1: ≥50mm -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="60" height="56" viewBox="0 0 60 56">
+              <circle cx="30" cy="34" r="18" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <circle cx="30" cy="34" r="10" fill="none" stroke="#888" stroke-width="1.5"/>
+              <circle cx="30" cy="12" r="7" fill="#ddd" stroke="#888" stroke-width="1.2"/>
+              <text x="30" y="16" text-anchor="middle" font-size="7" fill="#555" font-family="Barlow,sans-serif">≥50mm</text>
+            </svg>
+          </div>
+          <!-- 2: ≥12mm -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="60" height="56" viewBox="0 0 60 56">
+              <circle cx="30" cy="34" r="18" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <circle cx="30" cy="34" r="10" fill="none" stroke="#888" stroke-width="1.5"/>
+              <circle cx="30" cy="11" r="5" fill="#ddd" stroke="#888" stroke-width="1.2"/>
+              <text x="30" y="14" text-anchor="middle" font-size="6.5" fill="#555" font-family="Barlow,sans-serif">≥12mm</text>
+              <line x1="30" y1="16" x2="34" y2="28" stroke="#888" stroke-width="1.2"/>
+              <circle cx="34" cy="30" r="2" fill="#888"/>
+            </svg>
+          </div>
+          <!-- 3: ≥2,5mm -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="60" height="56" viewBox="0 0 60 56">
+              <circle cx="30" cy="34" r="18" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <circle cx="30" cy="34" r="10" fill="none" stroke="#888" stroke-width="1.5"/>
+              <line x1="15" y1="20" x2="36" y2="34" stroke="#888" stroke-width="1.5"/>
+              <text x="22" y="18" text-anchor="middle" font-size="6.5" fill="#555" font-family="Barlow,sans-serif">≥2,5mm</text>
+            </svg>
+          </div>
+          <!-- 4: ≥1mm — DESTAQUE -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px;background:#fff5f4">
+            <svg width="60" height="56" viewBox="0 0 60 56">
+              <circle cx="30" cy="34" r="19" fill="none" stroke="#c23020" stroke-width="2" stroke-dasharray="4,3"/>
+              <circle cx="30" cy="34" r="11" fill="none" stroke="#c23020" stroke-width="2"/>
+              <line x1="16" y1="24" x2="34" y2="34" stroke="#c23020" stroke-width="1.8"/>
+              <text x="23" y="20" text-anchor="middle" font-size="7" fill="#c23020" font-weight="700" font-family="Barlow,sans-serif">≥1mm</text>
+            </svg>
+          </div>
+          <!-- 5: poeira -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="60" height="56" viewBox="0 0 60 56">
+              <circle cx="30" cy="34" r="19" fill="none" stroke="#888" stroke-width="1.5"/>
+              <circle cx="30" cy="34" r="11" fill="none" stroke="#888" stroke-width="1.5"/>
+              <!-- dots representing dust -->
+              <circle cx="14" cy="20" r="1.5" fill="#aaa"/><circle cx="10" cy="28" r="1.5" fill="#aaa"/>
+              <circle cx="12" cy="36" r="1.5" fill="#aaa"/><circle cx="16" cy="44" r="1.5" fill="#aaa"/>
+              <circle cx="46" cy="20" r="1.5" fill="#aaa"/><circle cx="50" cy="28" r="1.5" fill="#aaa"/>
+              <circle cx="48" cy="36" r="1.5" fill="#aaa"/><circle cx="44" cy="44" r="1.5" fill="#aaa"/>
+              <circle cx="26" cy="14" r="1.5" fill="#aaa"/><circle cx="34" cy="14" r="1.5" fill="#aaa"/>
+              <circle cx="22" cy="52" r="1.5" fill="#aaa"/><circle cx="30" cy="54" r="1.5" fill="#aaa"/>
+              <circle cx="38" cy="52" r="1.5" fill="#aaa"/>
+            </svg>
+          </div>
+          <!-- 6: totalmente protegido -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;min-height:100px">
+            <svg width="60" height="56" viewBox="0 0 60 56">
+              <circle cx="30" cy="34" r="19" fill="none" stroke="#888" stroke-width="1.5"/>
+              <circle cx="30" cy="34" r="11" fill="none" stroke="#888" stroke-width="1.5"/>
+              <!-- dense dots -->
+              <circle cx="12" cy="22" r="1.2" fill="#999"/><circle cx="8" cy="30" r="1.2" fill="#999"/><circle cx="10" cy="38" r="1.2" fill="#999"/>
+              <circle cx="14" cy="46" r="1.2" fill="#999"/><circle cx="48" cy="22" r="1.2" fill="#999"/><circle cx="52" cy="30" r="1.2" fill="#999"/>
+              <circle cx="50" cy="38" r="1.2" fill="#999"/><circle cx="46" cy="46" r="1.2" fill="#999"/>
+              <circle cx="22" cy="14" r="1.2" fill="#999"/><circle cx="30" cy="12" r="1.2" fill="#999"/><circle cx="38" cy="14" r="1.2" fill="#999"/>
+              <circle cx="20" cy="53" r="1.2" fill="#999"/><circle cx="30" cy="55" r="1.2" fill="#999"/><circle cx="40" cy="53" r="1.2" fill="#999"/>
+              <circle cx="17" cy="17" r="1.2" fill="#999"/><circle cx="43" cy="17" r="1.2" fill="#999"/>
+              <circle cx="17" cy="47" r="1.2" fill="#999"/><circle cx="43" cy="47" r="1.2" fill="#999"/>
+            </svg>
+          </div>
+        </div>
+        <!-- descriptions row -->
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);">
+          <div style="padding:12px 14px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Sem Proteção</div>
+          <div style="padding:12px 14px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Corpos sólidos superiores a 50mm</div>
+          <div style="padding:12px 14px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Corpos sólidos superiores a 12mm</div>
+          <div style="padding:12px 14px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Corpos sólidos superiores a 2,5mm</div>
+          <div style="padding:12px 14px;font-size:12px;font-weight:700;color:var(--red);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border);background:#fff5f4">Corpos sólidos superiores a 1,0mm</div>
+          <div style="padding:12px 14px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Poeira e Areia (sem depósito prejudicial)</div>
+          <div style="padding:12px 14px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4">Totalmente protegido contra poeira</div>
+        </div>
+      </div>
+
+      <!-- ─── BLOCO 2: 2º Algarismo ─── -->
+      <div style="background:var(--white);border-radius:8px;border:1px solid var(--gray-border);overflow:hidden;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,.04)">
+        <div style="background:var(--navy);padding:14px 28px;display:flex;align-items:baseline;gap:12px;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:var(--white);text-transform:uppercase;letter-spacing:.04em">2º Algarismo</span>
+          <span style="font-size:13px;color:rgba(255,255,255,.60);font-style:italic">Proteção contra penetração de líquidos</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(9,1fr);border-bottom:2px solid var(--gray-border);">
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">0</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">1</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">2</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">3</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--red);border-right:1px solid var(--gray-border);background:#fff5f4">4</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">5</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">6</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">7</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted)">8</div>
+        </div>
+        <!-- icons row 2nd digit -->
+        <div style="display:grid;grid-template-columns:repeat(9,1fr);border-bottom:1px solid var(--gray-border);">
+          <!-- 0 -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:90px">
+            <svg width="44" height="44" viewBox="0 0 44 44"><ellipse cx="22" cy="28" rx="16" ry="12" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4,3"/><line x1="8" y1="8" x2="36" y2="40" stroke="#ccc" stroke-width="1.5"/></svg>
+          </div>
+          <!-- 1: gotas verticais -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:90px">
+            <svg width="44" height="50" viewBox="0 0 44 50">
+              <ellipse cx="22" cy="36" rx="14" ry="10" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <line x1="14" y1="4" x2="14" y2="20" stroke="#5599cc" stroke-width="1.5"/>
+              <line x1="20" y1="2" x2="20" y2="18" stroke="#5599cc" stroke-width="1.5"/>
+              <line x1="26" y1="4" x2="26" y2="20" stroke="#5599cc" stroke-width="1.5"/>
+              <line x1="32" y1="2" x2="32" y2="18" stroke="#5599cc" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <!-- 2: 15° -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:90px">
+            <svg width="44" height="50" viewBox="0 0 44 50">
+              <ellipse cx="22" cy="36" rx="14" ry="10" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <line x1="10" y1="4" x2="15" y2="22" stroke="#5599cc" stroke-width="1.5"/>
+              <line x1="17" y1="2" x2="21" y2="20" stroke="#5599cc" stroke-width="1.5"/>
+              <line x1="24" y1="3" x2="27" y2="21" stroke="#5599cc" stroke-width="1.5"/>
+              <line x1="31" y1="5" x2="33" y2="23" stroke="#5599cc" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <!-- 3: 60° -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:90px">
+            <svg width="44" height="50" viewBox="0 0 44 50">
+              <ellipse cx="22" cy="36" rx="14" ry="10" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <line x1="4" y1="8" x2="14" y2="24" stroke="#5599cc" stroke-width="1.3"/>
+              <line x1="10" y1="4" x2="18" y2="21" stroke="#5599cc" stroke-width="1.3"/>
+              <line x1="18" y1="3" x2="23" y2="21" stroke="#5599cc" stroke-width="1.3"/>
+              <line x1="26" y1="4" x2="28" y2="23" stroke="#5599cc" stroke-width="1.3"/>
+              <line x1="33" y1="8" x2="32" y2="26" stroke="#5599cc" stroke-width="1.3"/>
+              <line x1="39" y1="14" x2="35" y2="28" stroke="#5599cc" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <!-- 4: todas direções — DESTAQUE -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:90px;background:#fff5f4">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+              <ellipse cx="25" cy="25" rx="14" ry="14" fill="none" stroke="#c23020" stroke-width="2"/>
+              <!-- rays all around -->
+              <line x1="25" y1="2" x2="25" y2="9" stroke="#c23020" stroke-width="1.5"/>
+              <line x1="25" y1="41" x2="25" y2="48" stroke="#c23020" stroke-width="1.5"/>
+              <line x1="2" y1="25" x2="9" y2="25" stroke="#c23020" stroke-width="1.5"/>
+              <line x1="41" y1="25" x2="48" y2="25" stroke="#c23020" stroke-width="1.5"/>
+              <line x1="8" y1="8" x2="13" y2="13" stroke="#c23020" stroke-width="1.5"/>
+              <line x1="37" y1="37" x2="42" y2="42" stroke="#c23020" stroke-width="1.5"/>
+              <line x1="42" y1="8" x2="37" y2="13" stroke="#c23020" stroke-width="1.5"/>
+              <line x1="8" y1="42" x2="13" y2="37" stroke="#c23020" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <!-- 5: jato direcional -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:90px">
+            <svg width="50" height="44" viewBox="0 0 50 44">
+              <ellipse cx="30" cy="22" rx="12" ry="12" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <line x1="4" y1="22" x2="16" y2="22" stroke="#5599cc" stroke-width="2"/>
+              <polygon points="16,18 16,26 22,22" fill="#5599cc"/>
+              <line x1="4" y1="16" x2="10" y2="20" stroke="#5599cc" stroke-width="1.2"/>
+              <line x1="4" y1="28" x2="10" y2="24" stroke="#5599cc" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <!-- 6: jato potente -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:90px">
+            <svg width="50" height="44" viewBox="0 0 50 44">
+              <ellipse cx="30" cy="22" rx="12" ry="12" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <line x1="2" y1="22" x2="16" y2="22" stroke="#5599cc" stroke-width="3"/>
+              <polygon points="16,17 16,27 23,22" fill="#5599cc"/>
+              <line x1="2" y1="14" x2="10" y2="18" stroke="#5599cc" stroke-width="1.5"/>
+              <line x1="2" y1="30" x2="10" y2="26" stroke="#5599cc" stroke-width="1.5"/>
+              <!-- person silhouette hint -->
+              <circle cx="42" cy="10" r="3" fill="#aaa"/>
+              <line x1="42" y1="13" x2="42" y2="26" stroke="#aaa" stroke-width="1.5"/>
+              <line x1="36" y1="18" x2="48" y2="18" stroke="#aaa" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <!-- 7: imersão 1m -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:90px">
+            <svg width="44" height="50" viewBox="0 0 44 50">
+              <rect x="4" y="4" width="36" height="42" rx="1" fill="none" stroke="#888" stroke-width="1.5"/>
+              <!-- water fill -->
+              <rect x="4" y="24" width="36" height="22" rx="1" fill="#c8dff0" opacity="0.5"/>
+              <ellipse cx="22" cy="36" rx="9" ry="7" fill="none" stroke="#5599cc" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <!-- 15cm marker -->
+              <line x1="38" y1="4" x2="38" y2="24" stroke="#555" stroke-width="1"/>
+              <line x1="34" y1="4" x2="42" y2="4" stroke="#555" stroke-width="1"/>
+              <line x1="34" y1="24" x2="42" y2="24" stroke="#555" stroke-width="1"/>
+              <text x="43" y="15" font-size="7" fill="#555" font-family="Barlow,sans-serif">1m</text>
+            </svg>
+          </div>
+          <!-- 8: imersão prolongada -->
+          <div style="padding:16px 8px;display:flex;align-items:center;justify-content:center;min-height:90px">
+            <svg width="44" height="50" viewBox="0 0 44 50">
+              <rect x="2" y="4" width="40" height="42" rx="1" fill="none" stroke="#888" stroke-width="1.5"/>
+              <rect x="2" y="14" width="40" height="32" rx="1" fill="#c8dff0" opacity="0.6"/>
+              <!-- horizontal lines = depth -->
+              <line x1="4" y1="20" x2="40" y2="20" stroke="#5599cc" stroke-width="0.8" opacity="0.6"/>
+              <line x1="4" y1="28" x2="40" y2="28" stroke="#5599cc" stroke-width="0.8" opacity="0.6"/>
+              <line x1="4" y1="36" x2="40" y2="36" stroke="#5599cc" stroke-width="0.8" opacity="0.6"/>
+              <ellipse cx="22" cy="38" rx="9" ry="5" fill="none" stroke="#5599cc" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <!-- m marker -->
+              <line x1="39" y1="4" x2="39" y2="14" stroke="#555" stroke-width="1"/>
+              <text x="36" y="11" font-size="7" fill="#555" font-family="Barlow,sans-serif">m</text>
+            </svg>
+          </div>
+        </div>
+        <!-- descriptions row 2nd digit -->
+        <div style="display:grid;grid-template-columns:repeat(9,1fr);">
+          <div style="padding:10px 8px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Sem Proteção</div>
+          <div style="padding:10px 8px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Quedas de gotas de água</div>
+          <div style="padding:10px 8px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Quedas de água até 15° de inclinação</div>
+          <div style="padding:10px 8px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Chuva de até 60° de inclinação</div>
+          <div style="padding:10px 8px;font-size:11px;font-weight:700;color:var(--red);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border);background:#fff5f4">Proteção de água de qualquer direção</div>
+          <div style="padding:10px 8px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Jato de água de qualquer direção</div>
+          <div style="padding:10px 8px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Proteção de água de alta pressão</div>
+          <div style="padding:10px 8px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Imersão temporária</div>
+          <div style="padding:10px 8px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4">Imersão prolongada sob pressão</div>
+        </div>
+      </div>
+
+      <!-- ─── BLOCO 3: 3º Algarismo IK ─── -->
+      <div style="background:var(--white);border-radius:8px;border:1px solid var(--gray-border);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04)">
+        <div style="background:var(--navy);padding:14px 28px;display:flex;align-items:baseline;gap:12px;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:var(--white);text-transform:uppercase;letter-spacing:.04em">3º Algarismo — IK</span>
+          <span style="font-size:13px;color:rgba(255,255,255,.60);font-style:italic">Proteção mecânica contra impactos</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);border-bottom:2px solid var(--gray-border);">
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">IK00</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">IK01</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">IK03</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted);border-right:1px solid var(--gray-border)">IK05</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--red);border-right:1px solid var(--gray-border);background:#fff5f4">IK07</div>
+          <div style="padding:10px 0;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--text-muted)">IK09</div>
+        </div>
+        <!-- icons IK -->
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);border-bottom:1px solid var(--gray-border);">
+          <!-- IK00 -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="54" height="54" viewBox="0 0 54 54">
+              <circle cx="22" cy="38" r="12" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <line x1="8" y1="8" x2="46" y2="46" stroke="#ccc" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <!-- IK01: 150g 15cm -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+              <circle cx="18" cy="46" r="11" fill="none" stroke="#888" stroke-width="1.5"/>
+              <ellipse cx="38" cy="16" rx="8" ry="6" fill="#aaa" stroke="#777" stroke-width="1.2" transform="rotate(-30 38 16)"/>
+              <line x1="38" y1="22" x2="28" y2="40" stroke="#777" stroke-width="1.5"/>
+              <!-- height marker -->
+              <line x1="48" y1="22" x2="48" y2="38" stroke="#555" stroke-width="1"/>
+              <line x1="44" y1="22" x2="52" y2="22" stroke="#555" stroke-width="1"/>
+              <line x1="44" y1="38" x2="52" y2="38" stroke="#555" stroke-width="1"/>
+              <text x="54" y="32" font-size="7" fill="#555" font-family="Barlow,sans-serif">15cm</text>
+              <text x="34" y="10" font-size="7" fill="#555" font-family="Barlow,sans-serif">150g</text>
+            </svg>
+          </div>
+          <!-- IK03: 250g 20cm -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+              <circle cx="18" cy="46" r="11" fill="none" stroke="#888" stroke-width="1.5"/>
+              <ellipse cx="38" cy="14" rx="8" ry="6" fill="#aaa" stroke="#777" stroke-width="1.2" transform="rotate(-30 38 14)"/>
+              <line x1="38" y1="20" x2="27" y2="40" stroke="#777" stroke-width="1.5"/>
+              <line x1="48" y1="20" x2="48" y2="38" stroke="#555" stroke-width="1"/>
+              <line x1="44" y1="20" x2="52" y2="20" stroke="#555" stroke-width="1"/>
+              <line x1="44" y1="38" x2="52" y2="38" stroke="#555" stroke-width="1"/>
+              <text x="54" y="31" font-size="7" fill="#555" font-family="Barlow,sans-serif">20cm</text>
+              <text x="34" y="8" font-size="7" fill="#555" font-family="Barlow,sans-serif">250g</text>
+            </svg>
+          </div>
+          <!-- IK05: 500g 40cm -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+              <circle cx="16" cy="48" r="11" fill="none" stroke="#888" stroke-width="1.5"/>
+              <ellipse cx="36" cy="10" rx="9" ry="7" fill="#aaa" stroke="#777" stroke-width="1.2" transform="rotate(-30 36 10)"/>
+              <line x1="36" y1="17" x2="24" y2="42" stroke="#777" stroke-width="1.5"/>
+              <line x1="47" y1="14" x2="47" y2="34" stroke="#555" stroke-width="1"/>
+              <line x1="43" y1="14" x2="51" y2="14" stroke="#555" stroke-width="1"/>
+              <line x1="43" y1="34" x2="51" y2="34" stroke="#555" stroke-width="1"/>
+              <text x="53" y="26" font-size="7" fill="#555" font-family="Barlow,sans-serif">40cm</text>
+              <text x="33" y="5" font-size="7" fill="#555" font-family="Barlow,sans-serif">500g</text>
+            </svg>
+          </div>
+          <!-- IK07: 1.5kg 40cm — DESTAQUE -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--gray-border);min-height:100px;background:#fff5f4">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+              <circle cx="16" cy="48" r="11" fill="none" stroke="#c23020" stroke-width="2"/>
+              <ellipse cx="36" cy="10" rx="10" ry="7" fill="#e88" stroke="#c23020" stroke-width="1.5" transform="rotate(-30 36 10)"/>
+              <line x1="36" y1="17" x2="24" y2="42" stroke="#c23020" stroke-width="2"/>
+              <line x1="47" y1="14" x2="47" y2="34" stroke="#c23020" stroke-width="1"/>
+              <line x1="43" y1="14" x2="51" y2="14" stroke="#c23020" stroke-width="1"/>
+              <line x1="43" y1="34" x2="51" y2="34" stroke="#c23020" stroke-width="1"/>
+              <text x="53" y="26" font-size="7" fill="#c23020" font-weight="700" font-family="Barlow,sans-serif">40cm</text>
+              <text x="31" y="5" font-size="7" fill="#c23020" font-weight="700" font-family="Barlow,sans-serif">1,5Kg</text>
+            </svg>
+          </div>
+          <!-- IK09: 5kg 40cm -->
+          <div style="padding:20px 12px;display:flex;align-items:center;justify-content:center;min-height:100px">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+              <circle cx="16" cy="48" r="11" fill="none" stroke="#888" stroke-width="1.5"/>
+              <ellipse cx="36" cy="10" rx="11" ry="8" fill="#bbb" stroke="#777" stroke-width="1.2" transform="rotate(-30 36 10)"/>
+              <line x1="36" y1="18" x2="24" y2="43" stroke="#777" stroke-width="2"/>
+              <line x1="48" y1="14" x2="48" y2="34" stroke="#555" stroke-width="1"/>
+              <line x1="44" y1="14" x2="52" y2="14" stroke="#555" stroke-width="1"/>
+              <line x1="44" y1="34" x2="52" y2="34" stroke="#555" stroke-width="1"/>
+              <text x="54" y="26" font-size="7" fill="#555" font-family="Barlow,sans-serif">40cm</text>
+              <text x="35" y="5" font-size="7" fill="#555" font-family="Barlow,sans-serif">5Kg</text>
+            </svg>
+          </div>
+        </div>
+        <!-- descriptions IK -->
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);">
+          <div style="padding:12px 10px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Sem Proteção</div>
+          <div style="padding:12px 10px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Impacto de 0,225 joule</div>
+          <div style="padding:12px 10px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Impacto de 0,500 joule</div>
+          <div style="padding:12px 10px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border)">Impacto de 2,00 joules</div>
+          <div style="padding:12px 10px;font-size:12px;font-weight:700;color:var(--red);text-align:center;line-height:1.4;border-right:1px solid var(--gray-border);background:#fff5f4">Impacto de 6,00 joules</div>
+          <div style="padding:12px 10px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.4">Impacto de 20,00 joules</div>
+        </div>
+      </div>
+
+      <!-- nota rodapé -->
+      <p style="font-size:11px;color:var(--text-light);margin-top:16px;padding-left:4px">* Dígitos em vermelho indicam o grau de proteção adotado na Linha Cekton. Norma de referência: NBR IEC 60529 (IP) e IEC 62262 (IK).</p>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo_strahl.png" alt="STRAHL" class="footer-logo logo-white">
+          <p class="footer-desc">Referência em engenharia elétrica de produto desde 1986. Qualidade e inovação para o mercado industrial.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul>
+            <li><a href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><span class="material-symbols-outlined">call</span> 11 2818-3838</a></li>
+            <li><span class="material-symbols-outlined">mail</span> vendas@strahl.com</li>
+            <li><a href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span> WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="https://www.strahl.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined">language</span> strahl.com</a></li>
+            <li><a href="https://loja.strahl.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined">storefront</span> lojastrahl.com</a></li>
+            <li>Privacidade</li>
+            <li>Compliance</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Localização</h4>
+          <ul><li><span class="material-symbols-outlined">location_on</span> São Paulo, SP — Brasil</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Materiais Elétricos STRAHL. Todos os direitos reservados.</div>
+  </footer>
+
+</div><!-- /page-cekton -->
+
+
+<!-- ══════════════ PAGE: DATASHEET ══════════════ -->
+<div class="page" id="page-datasheet">
+
+  <!-- DS Header -->
+  <div class="ds-header">
+    <div class="ds-header-inner">
+      <div>
+        <div class="tag">Ficha Técnica de Produto · Linha Cekton®</div>
+        <h1>Plugue Industrial 16A 2P+T 6H 220–240V</h1>
+      </div>
+      <div class="ds-ref">
+        <div class="ref-lbl">Código de Referência</div>
+        <div class="ref-num">REF: 3076/CK</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <span onclick="goTo('home')">Home</span>
+      <span class="sep">/</span>
+      <span onclick="goTo('cekton')" style="cursor:pointer">Linha Cekton</span>
+      <span class="sep">/</span>
+      <span class="current">3076/CK — Plugue Industrial 16A 2P+T 6H 220–240V</span>
+    </div>
+  </div>
+
+  <!-- DS Nav Bar -->
+  <div class="ds-nav-bar" id="ds3076-navbar">
+    <div class="ds-nav-bar-inner">
+      <button class="ds-nav-btn active" data-target="ds3076-ficha">Ficha Técnica</button>
+      <button class="ds-nav-btn" data-target="ds3076-specs">Especificações</button>
+      <button class="ds-nav-btn" data-target="ds3076-drawings">Desenhos 2D/3D</button>
+      <button class="ds-nav-btn" data-target="ds3076-certs">Certificações</button>
+      <button class="ds-nav-btn" data-target="ds3076-downloads">Downloads</button>
+      <button class="ds-download" onclick="window.open('assets/datasheet-3076ck-print.html','_blank')"><span class="material-symbols-outlined" style="font-size:16px">download</span> Baixar PDF</button>
+    </div>
+  </div>
+
+  <!-- DS Body -->
+  <div class="ds-body">
+    <div class="ds-grid">
+
+      <!-- LEFT: Image Panel -->
+      <div class="ds-img-panel">
+        <div class="ds-main-img" id="ds-main-img-box">
+          <img id="ds-main-photo" src="assets/images/produto_3076ck_principal.jpg" alt="Plugue Industrial 3076/CK — vista principal" style="width:100%;height:100%;object-fit:contain;padding:8px">
+        </div>
+        <div class="ds-thumbs">
+          <div class="ds-thumb active" onclick="dsSetImg(this, 'assets/images/produto_3076ck_principal_thumb.jpg')">
+            <img src="assets/images/produto_3076ck_principal_thumb.jpg" alt="Principal">
+          </div>
+          <div class="ds-thumb" onclick="dsSetImg(this, 'assets/images/produto_3076ck_frente_thumb.jpg')">
+            <img src="assets/images/produto_3076ck_frente_thumb.jpg" alt="Frente">
+          </div>
+          <div class="ds-thumb" onclick="dsSetImg(this, 'assets/images/produto_3076ck_lateral_thumb.jpg')">
+            <img src="assets/images/produto_3076ck_lateral_thumb.jpg" alt="Lateral">
+          </div>
+          <div class="ds-thumb" onclick="dsSetImg(this, 'assets/images/produto_3076ck_traseira_thumb.jpg')">
+            <img src="assets/images/produto_3076ck_traseira_thumb.jpg" alt="Traseira">
+          </div>
+        </div>
+
+        <!-- Position Indicator -->
+        <div class="pos-indicator" style="background:linear-gradient(135deg,#e8f0fb,#d0e2f8);border-color:#a0b8e0">
+          <div class="pos-lbl" style="color:#1a5faa">Posição Horária</div>
+          <div class="pos-time" style="color:#1a5faa">6h</div>
+          <div class="pos-voltage" style="color:#1a5faa">220–240V — AZUL</div>
+        </div>
+
+        <!-- Quick specs strip -->
+        <div style="margin-top:16px;background:var(--gray-bg);border:1px solid var(--gray-border);border-radius:6px;padding:16px 20px;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.10em;color:var(--text-muted);margin-bottom:12px">Resumo Técnico</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px">
+              <span style="color:var(--text-muted)">Corrente</span><strong>16A</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px">
+              <span style="color:var(--text-muted)">Tensão</span><strong>220–240V</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px">
+              <span style="color:var(--text-muted)">Pólos</span><strong>2P + T</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px">
+              <span style="color:var(--text-muted)">Grau IP</span><strong>IP 44</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px">
+              <span style="color:var(--text-muted)">Proteção IK</span><strong>IK05</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:13px">
+              <span style="color:var(--text-muted)">Temp. trabalho</span><strong>−20°C a +120°C</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Technical Content -->
+      <div class="ds-right-panel">
+
+        <!-- Linha badge -->
+        <div class="linha-badge" id="ds3076-ficha">
+          <div class="lb-name">Linha CEKTON®</div>
+          <div class="lb-spec">Produção 100% nacional · Nylon 6.6 Auto-extinguível</div>
+        </div>
+
+        <!-- Diferenciais -->
+        <div class="ds-section-title"><span class="material-symbols-outlined">bolt</span> Diferenciais Técnicos</div>
+        <div class="dif-grid-2" style="margin-bottom:24px">
+          <div class="dif-item">
+            <div class="dif-item-title">Núcleos Compactos</div>
+            <p>Devido a seu design e material, dão rendimento máximo aos valores nominais de funcionamento e resistem amplamente aos esforços mecânicos e térmicos.</p>
+          </div>
+          <div class="dif-item">
+            <div class="dif-item-title">Bornes Integrados</div>
+            <p>Formam uma só peça com buchas e pinos de contato, resultando em melhor continuidade e fixação dos condutores.</p>
+          </div>
+          <div class="dif-item">
+            <div class="dif-item-title">Pinos de Contato Niquelados</div>
+            <p>Construídos em latão maciço niquelado — uma só peça — assegurando perfeito contato e alta resistência à abrasão e oxidação. Pinos autocentrantes.</p>
+          </div>
+          <div class="dif-item">
+            <div class="dif-item-title">Pino Terra Prioritário</div>
+            <p>Diâmetro maior que os pinos fases: conecta antes e desconecta depois, garantindo máxima segurança em todas as manobras.</p>
+          </div>
+          <div class="dif-item">
+            <div class="dif-item-title">Carcaça Nylon 6.6 Auto-extinguível</div>
+            <p>Resistente à abrasão e corrosão. Cor azul identifica visualmente a tensão 220–240V. Facilidade de manutenção na troca de miolos. Evita inversão de polos.</p>
+          </div>
+          <div class="dif-item">
+            <div class="dif-item-title">Passa-Cabo Flexível (PG 16)</div>
+            <p>Hermeticidade perfeita ao condutor — impede entrada de pó ou água e evita atrito do cabo com a carcaça. Bitolas recomendadas: 2,5 a 4,0 mm².</p>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Specs Elétricas -->
+        <div id="ds3076-specs" style="scroll-margin-top:80px"></div>
+        <div class="ds-section-title"><span class="material-symbols-outlined">electric_bolt</span> Especificações Elétricas e Técnicas</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:24px;border:1px solid var(--gray-border);border-radius:6px;overflow:hidden">
+          <table class="specs-table" style="margin:0;border-right:1px solid var(--gray-border)">
+            <tr><td>Tensão de Utilização</td><td><strong style="color:#1a5faa">220–240V</strong></td></tr>
+            <tr><td>Corrente Nominal</td><td><strong>16A</strong></td></tr>
+            <tr><td>Nº de Pólos</td><td><strong>2P + T (3 pinos)</strong></td></tr>
+            <tr><td>Posição Pino Terra</td><td><strong>6h</strong></td></tr>
+            <tr><td>Temperatura de Trabalho</td><td><strong>−20°C a +120°C</strong></td></tr>
+          </table>
+          <table class="specs-table" style="margin:0">
+            <tr><td>Grau de Proteção</td><td><strong>IP 44</strong></td></tr>
+            <tr><td>Proteção Mecânica</td><td><strong>IK05</strong></td></tr>
+            <tr><td>Matéria Prima</td><td><strong>Nylon 6.6 (Poliamida)</strong></td></tr>
+            <tr><td>Prensa-cabo</td><td><strong>PG 16 (não incluso)</strong></td></tr>
+            <tr><td>Conformidade Normativa</td><td><strong>NBR IEC 60309</strong></td></tr>
+          </table>
+        </div>
+
+        <!-- Protection badges -->
+        <div class="prot-badges" style="margin-bottom:24px">
+          <div class="prot-badge">
+            <div class="pb-level">IP44</div>
+            <div class="pb-desc">Sólidos &gt;1mm · Respingos<br>todas as direções</div>
+          </div>
+          <div class="prot-badge" style="background:var(--gray-bg);color:var(--navy)">
+            <div class="pb-level" style="color:var(--navy)">IK05</div>
+            <div class="pb-desc" style="color:var(--text-muted)">Impacto mecânico<br>até 2,00 joules</div>
+          </div>
+          <div class="prot-badge" style="background:var(--gray-bg);color:var(--navy)">
+            <div class="pb-level" style="color:var(--navy);font-size:22px;padding-top:6px">NBR IEC<br>60309</div>
+            <div class="pb-desc" style="color:var(--text-muted)">CEE 17 · VDE 0623</div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Technical Drawing -->
+        <div id="ds3076-drawings" style="scroll-margin-top:80px"></div>
+        <div class="ds-section-title"><span class="material-symbols-outlined">straighten</span> Dimensões Técnicas (mm) — Plugues 16A</div>
+
+        <div style="background:var(--white);border:1px solid var(--gray-border);border-radius:6px;padding:24px 28px;margin-bottom:20px">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.10em;color:var(--text-muted);margin-bottom:18px;text-align:center">Vista Técnica — 16A · 2P+T (3 Polos)</div>
+
+          <svg viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;display:block;margin:0 auto" font-family="Barlow,sans-serif">
+
+            <!-- ══ SIDE VIEW (left) ══ -->
+            <!-- cota L top arrow (full length) -->
+            <line x1="38" y1="26" x2="38" y2="178" stroke="#333" stroke-width="1"/>
+            <polygon points="35,26 41,26 38,19" fill="#333"/>
+            <polygon points="35,178 41,178 38,185" fill="#333"/>
+            <line x1="36" y1="26" x2="58" y2="26" stroke="#333" stroke-width=".8"/>
+            <line x1="36" y1="178" x2="58" y2="178" stroke="#333" stroke-width=".8"/>
+            <rect x="24" y="92" width="28" height="16" fill="var(--gray-bg)"/>
+            <text x="38" y="103" text-anchor="middle" font-size="12" font-weight="700" fill="#1b1c1c">L=112</text>
+
+            <!-- cota g (body diameter) -->
+            <line x1="52" y1="45" x2="52" y2="178" stroke="#333" stroke-width="1"/>
+            <polygon points="49,45 55,45 52,38" fill="#333"/>
+            <polygon points="49,178 55,178 52,185" fill="#333"/>
+            <line x1="50" y1="45" x2="70" y2="45" stroke="#333" stroke-width=".8"/>
+            <rect x="37" y="128" width="28" height="14" fill="var(--gray-bg)"/>
+            <text x="52" y="139" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">g=75</text>
+
+            <!-- Cable gland (threaded back, left) -->
+            <rect x="66" y="26" width="44" height="18" rx="2" fill="none" stroke="#333" stroke-width="1.5"/>
+            <!-- hatching gland -->
+            <line x1="72" y1="26" x2="72" y2="44" stroke="#aaa" stroke-width=".8"/>
+            <line x1="78" y1="26" x2="78" y2="44" stroke="#aaa" stroke-width=".8"/>
+            <line x1="84" y1="26" x2="84" y2="44" stroke="#aaa" stroke-width=".8"/>
+            <line x1="90" y1="26" x2="90" y2="44" stroke="#aaa" stroke-width=".8"/>
+            <line x1="96" y1="26" x2="96" y2="44" stroke="#aaa" stroke-width=".8"/>
+            <line x1="102" y1="26" x2="102" y2="44" stroke="#aaa" stroke-width=".8"/>
+
+            <!-- Locking ring -->
+            <rect x="58" y="44" width="60" height="13" rx="2" fill="none" stroke="#333" stroke-width="1.5"/>
+
+            <!-- Main body tapered -->
+            <path d="M68,57 L62,128 L68,158 L88,170 L108,158 L114,128 L108,57 Z" fill="none" stroke="#333" stroke-width="1.8"/>
+
+            <!-- center dashed -->
+            <line x1="88" y1="20" x2="88" y2="196" stroke="#333" stroke-width=".7" stroke-dasharray="6,3"/>
+
+            <!-- slot detail on body -->
+            <rect x="80" y="98" width="16" height="22" rx="1" fill="none" stroke="#555" stroke-width="1.1"/>
+
+            <!-- lug/tab -->
+            <path d="M74,158 L70,175 L82,177 L82,158" fill="none" stroke="#333" stroke-width="1.3"/>
+
+            <!-- face (right side) -->
+            <ellipse cx="114" cy="113" rx="8" ry="24" fill="#eee" stroke="#333" stroke-width="1.5"/>
+            <!-- pins on face -->
+            <line x1="108" y1="102" x2="120" y2="102" stroke="#555" stroke-width=".9"/>
+            <line x1="108" y1="113" x2="120" y2="113" stroke="#555" stroke-width=".9"/>
+            <line x1="108" y1="124" x2="120" y2="124" stroke="#555" stroke-width=".9"/>
+
+            <!-- cota E (body only, no gland) -->
+            <line x1="68" y1="196" x2="122" y2="196" stroke="#333" stroke-width="1"/>
+            <polygon points="68,193 68,199 61,196" fill="#333"/>
+            <polygon points="122,193 122,199 129,196" fill="#333"/>
+            <line x1="68" y1="188" x2="68" y2="200" stroke="#333" stroke-width=".8"/>
+            <line x1="122" y1="188" x2="122" y2="200" stroke="#333" stroke-width=".8"/>
+            <text x="95" y="213" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">E=43,5</text>
+
+            <!-- ══ FRONT VIEW (right) ══ -->
+            <!-- outer ring -->
+            <circle cx="390" cy="105" r="68" fill="#f5f5f5" stroke="#333" stroke-width="1.8"/>
+            <!-- mid ring -->
+            <circle cx="390" cy="105" r="52" fill="none" stroke="#bbb" stroke-width="1"/>
+            <!-- inner cavity -->
+            <circle cx="390" cy="105" r="34" fill="#222" stroke="#333" stroke-width="1.3"/>
+
+            <!-- cota K (outer diameter) -->
+            <line x1="322" y1="105" x2="322" y2="52" stroke="#555" stroke-width=".8" stroke-dasharray="3,2"/>
+            <line x1="458" y1="105" x2="458" y2="52" stroke="#555" stroke-width=".8" stroke-dasharray="3,2"/>
+            <line x1="324" y1="56" x2="456" y2="56" stroke="#333" stroke-width="1"/>
+            <polygon points="324,53 324,59 317,56" fill="#333"/>
+            <polygon points="456,53 456,59 463,56" fill="#333"/>
+            <text x="390" y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">K = Ø21,5</text>
+
+            <!-- Pin TERRA (6h = bottom, larger) -->
+            <circle cx="390" cy="130" r="8" fill="#c8c8c8" stroke="#999" stroke-width="1.3"/>
+            <circle cx="390" cy="130" r="3.5" fill="#555"/>
+
+            <!-- Pin L1 (10h position) -->
+            <circle cx="364" cy="88" r="6.5" fill="#c8c8c8" stroke="#999" stroke-width="1.2"/>
+            <circle cx="364" cy="88" r="2.8" fill="#555"/>
+
+            <!-- Pin L2 (2h position) -->
+            <circle cx="416" cy="88" r="6.5" fill="#c8c8c8" stroke="#999" stroke-width="1.2"/>
+            <circle cx="416" cy="88" r="2.8" fill="#555"/>
+
+            <!-- 6h indicator -->
+            <line x1="390" y1="105" x2="390" y2="126" stroke="#c23020" stroke-width="1.5"/>
+            <circle cx="390" cy="137" r="4" fill="none" stroke="#c23020" stroke-width="1.2"/>
+            <text x="408" y="140" font-size="10" fill="#c23020" font-weight="700">6h</text>
+
+            <!-- center dot -->
+            <circle cx="390" cy="105" r="3" fill="#666"/>
+
+            <!-- divider -->
+            <line x1="220" y1="18" x2="220" y2="210" stroke="#ddd" stroke-width="1" stroke-dasharray="5,4"/>
+
+            <!-- labels -->
+            <text x="130" y="218" text-anchor="middle" font-size="11" fill="#888" font-weight="600">VISTA LATERAL</text>
+            <text x="390" y="218" text-anchor="middle" font-size="11" fill="#888" font-weight="600">VISTA FRONTAL (FACE DE PINOS)</text>
+
+          </svg>
+        </div>
+
+        <!-- Dims table -->
+        <div style="border:1px solid var(--gray-border);border-radius:6px;overflow:hidden;margin-bottom:24px">
+          <table style="width:100%;border-collapse:collapse;font-size:13px">
+            <thead>
+              <tr style="background:var(--navy)">
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;letter-spacing:.06em;text-align:center">IN (A)</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;letter-spacing:.06em;text-align:center">Polos</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;letter-spacing:.06em;text-align:center">A</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;letter-spacing:.06em;text-align:center">E (mm)</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;letter-spacing:.06em;text-align:center">G (mm)</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;letter-spacing:.06em;text-align:center">L (mm)</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;letter-spacing:.06em;text-align:center">K (Ø mm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:var(--white)">
+                <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--navy);border-bottom:1px solid var(--gray-border)">16A</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">3 (2P+T)</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">×</td>
+                <td style="padding:9px 14px;text-align:center;font-weight:700;border-bottom:1px solid var(--gray-border)">43,5</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">75</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">112</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">21,5</td>
+              </tr>
+              <tr style="background:var(--gray-bg)">
+                <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--navy);border-bottom:1px solid var(--gray-border)">16A</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">4 (3P+T)</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">×</td>
+                <td style="padding:9px 14px;text-align:center;font-weight:700;border-bottom:1px solid var(--gray-border)">50</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">75</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">112</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">22</td>
+              </tr>
+              <tr style="background:var(--white)">
+                <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--navy)">16A</td>
+                <td style="padding:9px 14px;text-align:center">5 (3P+N+T)</td>
+                <td style="padding:9px 14px;text-align:center">×</td>
+                <td style="padding:9px 14px;text-align:center;font-weight:700">56</td>
+                <td style="padding:9px 14px;text-align:center">75</td>
+                <td style="padding:9px 14px;text-align:center">112</td>
+                <td style="padding:9px 14px;text-align:center">24</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:11px;color:var(--text-light);margin-bottom:24px">* Todas as dimensões em milímetros (mm). Sujeito a alterações sem aviso prévio.</p>
+
+        <hr class="divider">
+
+        <!-- Characteristics -->
+        <div class="ds-section-title"><span class="material-symbols-outlined">checklist</span> Características e Vantagens</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin-bottom:24px">
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Facilidade de manutenção na troca de miolos
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Evita erros de inserção com tensões diferentes
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Não permite a inversão de polos
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Identificação de tensão pela cor (azul = 220V)
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Prensa-cabo evita que fios se soltem no contato
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Bitolas recomendadas: 2,5 mm² a 4,0 mm²
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Pinos maciços autocentrantes em latão niquelado
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Resistência a impactos: até ±6 joules nos ensaios
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Produção 100% interna (Nylon 6.6 injetado na fábrica)
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>
+            Núcleos compactos — máximo rendimento nominal
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Obs & Conformidade -->
+        <div id="ds3076-certs" style="scroll-margin-top:80px"></div>
+        <div class="obs-grid">
+          <div class="obs-box">
+            <h4>Matéria Prima</h4>
+            <p>Miolo e Carcaça injetados internamente em termoplástico Nylon 6.6 auto-extinguível (Poliamida). Todos os componentes plásticos e contatos de latão são produzidos na fábrica STRAHL, em conformidade com os requisitos regulamentares e estatutários pertinentes. Todo lote produzido é inspecionado e ensaiado com resultados registrados por pessoal competente.</p>
+          </div>
+          <div class="obs-box">
+            <h4>Conformidade Normativa</h4>
+            <div class="norm-badges" style="margin-bottom:12px">
+              <span class="norm-badge">NBR IEC 60309</span>
+              <span class="norm-badge">CEE 17</span>
+              <span class="norm-badge">VDE 0623</span>
+            </div>
+            <p style="font-size:12px;color:var(--text-muted)">* IP: grau de proteção dos invólucros de materiais elétricos. Os dois primeiros algarismos são definidos conforme IEC 144 e IEC 529; o terceiro algarismo conforme o Anexo 1 da norma NFC 20 010.</p>
+            <p style="margin-top:10px;font-size:12px;color:var(--text-light);font-weight:700;text-transform:uppercase;letter-spacing:.08em">Materiais Elétricos STRAHL</p>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Downloads -->
+        <div id="ds3076-downloads" style="scroll-margin-top:80px"></div>
+        <div class="ds-section-title"><span class="material-symbols-outlined">folder_open</span> Downloads</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px">
+          <a onclick="window.open('assets/datasheet-3076ck-print.html','_blank')" style="display:flex;align-items:center;gap:10px;padding:14px 20px;border:1px solid var(--gray-border);border-radius:6px;cursor:pointer;text-decoration:none;color:var(--navy);background:var(--gray-bg);font-size:13px;font-weight:600;transition:border-color .2s">
+            <span class="material-symbols-outlined" style="font-size:22px;color:var(--red)">picture_as_pdf</span>
+            <span>
+              <div>Ficha Técnica — 3076/CK</div>
+              <div style="font-size:11px;font-weight:400;color:var(--text-muted)">PDF · Formato A4 para impressão</div>
+            </span>
+          </a>
+        </div>
+
+      </div><!-- /ds-right-panel -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo_strahl.png" alt="STRAHL" class="footer-logo logo-white">
+          <p class="footer-desc">Referência em engenharia elétrica de produto desde 1986.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><span class="material-symbols-outlined">mail</span> vendas@strahl.com</li>
+            <li><a href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><span class="material-symbols-outlined">call</span> 11 2818-3838</a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span> WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="https://www.strahl.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined">language</span> strahl.com</a></li>
+            <li><a href="https://loja.strahl.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined">storefront</span> lojastrahl.com</a></li>
+            <li>Privacidade</li>
+            <li>Compliance</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Localização</h4>
+          <ul><li><span class="material-symbols-outlined">location_on</span> São Paulo, SP — Brasil</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Materiais Elétricos STRAHL. Todos os direitos reservados.</div>
+  </footer>
+
+</div><!-- /page-datasheet -->
+
+
+<script src="assets/js/main.js"></script>
+
+<!-- ══════════════ PAGE: DATASHEET 4079/CK ══════════════ -->
+<div class="page" id="page-datasheet-4079">
+
+  <div class="ds-header">
+    <div class="ds-header-inner">
+      <div>
+        <div class="tag">Ficha Técnica de Produto · Linha Cekton®</div>
+        <h1>Plugue Industrial 16A 3P+T 9H 220&ndash;240V</h1>
+      </div>
+      <div class="ds-ref">
+        <div class="ref-lbl">Código de Referência</div>
+        <div class="ref-num">REF: 4079/CK</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <span onclick="goTo('home')">Home</span>
+      <span class="sep">/</span>
+      <span onclick="goTo('cekton')" style="cursor:pointer">Linha Cekton</span>
+      <span class="sep">/</span>
+      <span class="current">4079/CK &mdash; Plugue 16A 3P+T 9H 220&ndash;240V</span>
+    </div>
+  </div>
+
+  <div class="ds-nav-bar">
+    <div class="ds-nav-bar-inner">
+      <button class="ds-nav-btn active">Ficha Técnica</button>
+      <button class="ds-nav-btn">Especificações</button>
+      <button class="ds-nav-btn">Desenhos 2D/3D</button>
+      <button class="ds-nav-btn">Certificações</button>
+      <button class="ds-nav-btn">Downloads</button>
+      <button class="ds-download"><span class="material-symbols-outlined" style="font-size:16px">download</span> Baixar PDF</button>
+    </div>
+  </div>
+
+  <div class="ds-body">
+    <div class="ds-grid">
+
+      <!-- LEFT -->
+      <div class="ds-img-panel">
+        <div class="ds-main-img">
+          <img id="ds-4079-main-photo" src="assets/images/produto_4079ck_principal.jpg" alt="Plugue 4079/CK" style="width:100%;height:100%;object-fit:contain;padding:8px">
+        </div>
+        <div class="ds-thumbs">
+          <div class="ds-thumb active" onclick="ds4079SetImg(this,'assets/images/produto_4079ck_principal_thumb.jpg')"><img src="assets/images/produto_4079ck_principal_thumb.jpg" alt="Principal"></div>
+          <div class="ds-thumb" onclick="ds4079SetImg(this,'assets/images/produto_4079ck_frente_thumb.jpg')"><img src="assets/images/produto_4079ck_frente_thumb.jpg" alt="Frente"></div>
+          <div class="ds-thumb" onclick="ds4079SetImg(this,'assets/images/produto_4079ck_lateral_thumb.jpg')"><img src="assets/images/produto_4079ck_lateral_thumb.jpg" alt="Lateral"></div>
+          <div class="ds-thumb" onclick="ds4079SetImg(this,'assets/images/produto_4079ck_traseira_thumb.jpg')"><img src="assets/images/produto_4079ck_traseira_thumb.jpg" alt="Traseira"></div>
+        </div>
+
+        <div class="pos-indicator" style="background:linear-gradient(135deg,#e8f0fb,#d0e2f8);border-color:#a0b8e0;margin-top:16px">
+          <div class="pos-lbl" style="color:#1a5faa">Posição Horária</div>
+          <div class="pos-time" style="color:#1a5faa">9h</div>
+          <div class="pos-voltage" style="color:#1a5faa">220&ndash;240V &mdash; AZUL</div>
+        </div>
+
+        <div style="margin-top:16px;background:var(--gray-bg);border:1px solid var(--gray-border);border-radius:6px;padding:16px 20px">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.10em;color:var(--text-muted);margin-bottom:12px">Resumo Técnico</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px"><span style="color:var(--text-muted)">Corrente</span><strong>16A</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px"><span style="color:var(--text-muted)">Tensão</span><strong>220&ndash;240V</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px"><span style="color:var(--text-muted)">Pólos</span><strong>3P + T</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px"><span style="color:var(--text-muted)">Posição Terra</span><strong>9h</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px"><span style="color:var(--text-muted)">Grau IP</span><strong>IP 44</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid var(--gray-border);padding-bottom:6px"><span style="color:var(--text-muted)">Proteção IK</span><strong>IK05</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--text-muted)">Temp. trabalho</span><strong>&minus;20&deg;C a +120&deg;C</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="ds-right-panel">
+
+        <div class="linha-badge">
+          <div class="lb-name">Linha CEKTON&reg;</div>
+          <div class="lb-spec">Produção 100% nacional &middot; Nylon 6.6 Auto-extinguível</div>
+        </div>
+
+        <div class="ds-section-title"><span class="material-symbols-outlined">bolt</span> Diferenciais Técnicos</div>
+        <div class="dif-grid-2" style="margin-bottom:24px">
+          <div class="dif-item"><div class="dif-item-title">Núcleos Compactos</div><p>Design e material que garantem rendimento máximo aos valores nominais, resistindo amplamente a esforços mecânicos e térmicos.</p></div>
+          <div class="dif-item"><div class="dif-item-title">Bornes Integrados</div><p>Formam uma só peça com buchas e pinos de contato, resultando em melhor continuidade e fixação dos condutores.</p></div>
+          <div class="dif-item"><div class="dif-item-title">Pinos de Contato Niquelados</div><p>Latão maciço niquelado em peça única — perfeito contato e alta resistência à abrasão e oxidação. Pinos autocentrantes.</p></div>
+          <div class="dif-item"><div class="dif-item-title">Pino Terra Prioritário</div><p>Diâmetro maior que os pinos fases: conecta antes e desconecta depois, garantindo máxima segurança operacional.</p></div>
+          <div class="dif-item"><div class="dif-item-title">Carcaça Nylon 6.6 Auto-extinguível</div><p>Resistente à abrasão e corrosão. Cor azul = 220&ndash;240V. Evita inversão de polos e erros de inserção.</p></div>
+          <div class="dif-item"><div class="dif-item-title">Passa-Cabo Flexível (PG 16)</div><p>Vedação perfeita ao condutor — bloqueia pó e água, evita atrito do cabo com a carcaça. Bitolas: 2,5&ndash;4,0 mm².</p></div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="ds-section-title"><span class="material-symbols-outlined">electric_bolt</span> Especificações Elétricas e Técnicas</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:24px;border:1px solid var(--gray-border);border-radius:6px;overflow:hidden">
+          <table class="specs-table" style="margin:0;border-right:1px solid var(--gray-border)">
+            <tr><td>Tensão de Utilização</td><td><strong style="color:#1a5faa">220&ndash;240V</strong></td></tr>
+            <tr><td>Corrente Nominal</td><td><strong>16A</strong></td></tr>
+            <tr><td>N&ordm; de Pólos</td><td><strong>3P + T (4 pinos)</strong></td></tr>
+            <tr><td>Posição Pino Terra</td><td><strong>9h</strong></td></tr>
+            <tr><td>Temperatura de Trabalho</td><td><strong>&minus;20&deg;C a +120&deg;C</strong></td></tr>
+          </table>
+          <table class="specs-table" style="margin:0">
+            <tr><td>Grau de Proteção</td><td><strong>IP 44</strong></td></tr>
+            <tr><td>Proteção Mecânica</td><td><strong>IK05</strong></td></tr>
+            <tr><td>Matéria Prima</td><td><strong>Nylon 6.6 (Poliamida)</strong></td></tr>
+            <tr><td>Prensa-cabo</td><td><strong>PG 16 (não incluso)</strong></td></tr>
+            <tr><td>Conformidade Normativa</td><td><strong>NBR IEC 60309</strong></td></tr>
+          </table>
+        </div>
+
+        <div class="prot-badges" style="margin-bottom:24px">
+          <div class="prot-badge"><div class="pb-level">IP44</div><div class="pb-desc">Sólidos &gt;1mm · Respingos<br>todas as direções</div></div>
+          <div class="prot-badge" style="background:var(--gray-bg);color:var(--navy)"><div class="pb-level" style="color:var(--navy)">IK05</div><div class="pb-desc" style="color:var(--text-muted)">Impacto mecânico<br>até 2,00 joules</div></div>
+          <div class="prot-badge" style="background:var(--gray-bg);color:var(--navy)"><div class="pb-level" style="color:var(--navy);font-size:22px;padding-top:6px">NBR IEC<br>60309</div><div class="pb-desc" style="color:var(--text-muted)">CEE 17 &middot; VDE 0623</div></div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="ds-section-title"><span class="material-symbols-outlined">straighten</span> Dimensões Técnicas (mm) &mdash; Plugues 16A</div>
+
+        <div style="background:var(--white);border:1px solid var(--gray-border);border-radius:6px;padding:24px 28px;margin-bottom:20px">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.10em;color:var(--text-muted);margin-bottom:18px;text-align:center">Vista Técnica &mdash; 16A &middot; 3P+T &middot; 4 Polos &middot; Posição Terra 9h (esquerda)</div>
+          <svg viewBox="0 0 640 235" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;display:block;margin:0 auto" font-family="Barlow,sans-serif">
+
+            <!-- SIDE VIEW -->
+            <line x1="38" y1="26" x2="38" y2="178" stroke="#333" stroke-width="1"/>
+            <polygon points="35,26 41,26 38,19" fill="#333"/>
+            <polygon points="35,178 41,178 38,185" fill="#333"/>
+            <line x1="36" y1="26" x2="58" y2="26" stroke="#333" stroke-width=".8"/>
+            <line x1="36" y1="178" x2="58" y2="178" stroke="#333" stroke-width=".8"/>
+            <rect x="24" y="92" width="28" height="16" fill="var(--gray-bg)"/>
+            <text x="38" y="103" text-anchor="middle" font-size="12" font-weight="700" fill="#1b1c1c">L=112</text>
+            <line x1="52" y1="45" x2="52" y2="178" stroke="#333" stroke-width="1"/>
+            <polygon points="49,45 55,45 52,38" fill="#333"/>
+            <polygon points="49,178 55,178 52,185" fill="#333"/>
+            <line x1="50" y1="45" x2="70" y2="45" stroke="#333" stroke-width=".8"/>
+            <rect x="37" y="128" width="28" height="14" fill="var(--gray-bg)"/>
+            <text x="52" y="139" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">g=75</text>
+            <!-- cable gland -->
+            <rect x="66" y="26" width="44" height="18" rx="2" fill="none" stroke="#333" stroke-width="1.5"/>
+            <line x1="72" y1="26" x2="72" y2="44" stroke="#aaa" stroke-width=".8"/><line x1="78" y1="26" x2="78" y2="44" stroke="#aaa" stroke-width=".8"/>
+            <line x1="84" y1="26" x2="84" y2="44" stroke="#aaa" stroke-width=".8"/><line x1="90" y1="26" x2="90" y2="44" stroke="#aaa" stroke-width=".8"/>
+            <line x1="96" y1="26" x2="96" y2="44" stroke="#aaa" stroke-width=".8"/><line x1="102" y1="26" x2="102" y2="44" stroke="#aaa" stroke-width=".8"/>
+            <!-- lock ring -->
+            <rect x="58" y="44" width="60" height="13" rx="2" fill="none" stroke="#333" stroke-width="1.5"/>
+            <!-- body -->
+            <path d="M68,57 L62,128 L68,158 L88,170 L108,158 L114,128 L108,57 Z" fill="none" stroke="#333" stroke-width="1.8"/>
+            <line x1="88" y1="20" x2="88" y2="196" stroke="#333" stroke-width=".7" stroke-dasharray="6,3"/>
+            <rect x="80" y="98" width="16" height="22" rx="1" fill="none" stroke="#555" stroke-width="1.1"/>
+            <path d="M74,158 L70,175 L82,177 L82,158" fill="none" stroke="#333" stroke-width="1.3"/>
+            <ellipse cx="114" cy="113" rx="8" ry="24" fill="#eee" stroke="#333" stroke-width="1.5"/>
+            <line x1="108" y1="98" x2="120" y2="98" stroke="#555" stroke-width=".9"/>
+            <line x1="108" y1="108" x2="120" y2="108" stroke="#555" stroke-width=".9"/>
+            <line x1="108" y1="118" x2="120" y2="118" stroke="#555" stroke-width=".9"/>
+            <line x1="108" y1="128" x2="120" y2="128" stroke="#555" stroke-width=".9"/>
+            <!-- cota E=50 (4 polos) -->
+            <line x1="68" y1="197" x2="122" y2="197" stroke="#333" stroke-width="1"/>
+            <polygon points="68,194 68,200 61,197" fill="#333"/>
+            <polygon points="122,194 122,200 129,197" fill="#333"/>
+            <line x1="68" y1="189" x2="68" y2="201" stroke="#333" stroke-width=".8"/>
+            <line x1="122" y1="189" x2="122" y2="201" stroke="#333" stroke-width=".8"/>
+            <text x="95" y="214" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">E = 50</text>
+
+            <!-- FRONT VIEW — 4 pinos, terra at 9h (LEFT) -->
+            <circle cx="390" cy="108" r="68" fill="#f5f5f5" stroke="#333" stroke-width="1.8"/>
+            <circle cx="390" cy="108" r="52" fill="none" stroke="#bbb" stroke-width="1"/>
+            <circle cx="390" cy="108" r="35" fill="#1a1a1a" stroke="#333" stroke-width="1.3"/>
+            <!-- K diameter -->
+            <line x1="322" y1="108" x2="322" y2="52" stroke="#555" stroke-width=".8" stroke-dasharray="3,2"/>
+            <line x1="458" y1="108" x2="458" y2="52" stroke="#555" stroke-width=".8" stroke-dasharray="3,2"/>
+            <line x1="324" y1="56" x2="456" y2="56" stroke="#333" stroke-width="1"/>
+            <polygon points="324,53 324,59 317,56" fill="#333"/>
+            <polygon points="456,53 456,59 463,56" fill="#333"/>
+            <text x="390" y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">K = &Oslash;22</text>
+            <!-- Terra pin at 9h = left -->
+            <circle cx="355" cy="108" r="9.5" fill="#c0c0c0" stroke="#888" stroke-width="1.5"/>
+            <circle cx="355" cy="108" r="4" fill="#444"/>
+            <!-- L1 at ~1h (top-right) -->
+            <circle cx="416" cy="82" r="7" fill="#c0c0c0" stroke="#888" stroke-width="1.2"/>
+            <circle cx="416" cy="82" r="3" fill="#444"/>
+            <!-- L2 at ~5h (bottom-right) -->
+            <circle cx="416" cy="134" r="7" fill="#c0c0c0" stroke="#888" stroke-width="1.2"/>
+            <circle cx="416" cy="134" r="3" fill="#444"/>
+            <!-- N at ~11h (top-left) -->
+            <circle cx="376" cy="76" r="7" fill="#c0c0c0" stroke="#888" stroke-width="1.2"/>
+            <circle cx="376" cy="76" r="3" fill="#444"/>
+            <!-- 9h label -->
+            <line x1="390" y1="108" x2="357" y2="108" stroke="#c23020" stroke-width="1.5"/>
+            <circle cx="348" cy="108" r="4" fill="none" stroke="#c23020" stroke-width="1.3"/>
+            <text x="336" y="100" font-size="10" fill="#c23020" font-weight="700">9h</text>
+            <!-- center -->
+            <circle cx="390" cy="108" r="3" fill="#666"/>
+            <!-- divider -->
+            <line x1="220" y1="18" x2="220" y2="212" stroke="#ddd" stroke-width="1" stroke-dasharray="5,4"/>
+            <text x="130" y="222" text-anchor="middle" font-size="11" fill="#888" font-weight="600">VISTA LATERAL</text>
+            <text x="390" y="222" text-anchor="middle" font-size="11" fill="#888" font-weight="600">VISTA FRONTAL (FACE DE PINOS)</text>
+          </svg>
+        </div>
+
+        <!-- Dims table with 4P+T row highlighted -->
+        <div style="border:1px solid var(--gray-border);border-radius:6px;overflow:hidden;margin-bottom:8px">
+          <table style="width:100%;border-collapse:collapse;font-size:13px">
+            <thead>
+              <tr style="background:var(--navy)">
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;text-align:center">IN (A)</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;text-align:center">Polos</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;text-align:center">A</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;text-align:center">E (mm)</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;text-align:center">G (mm)</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;text-align:center">L (mm)</th>
+                <th style="padding:9px 14px;color:rgba(255,255,255,.80);font-size:11px;text-transform:uppercase;text-align:center">K (&Oslash; mm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:var(--white)">
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">16A</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">3 (2P+T)</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">&times;</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">43,5</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">75</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">112</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">21,5</td>
+              </tr>
+              <tr style="background:#fff5f4">
+                <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--red);border-bottom:1px solid var(--gray-border)">16A</td>
+                <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--red);border-bottom:1px solid var(--gray-border)">4 (3P+T) &#9664;</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">&times;</td>
+                <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--red);border-bottom:1px solid var(--gray-border)">50</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">75</td>
+                <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--gray-border)">112</td>
+                <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--red);border-bottom:1px solid var(--gray-border)">22</td>
+              </tr>
+              <tr style="background:var(--gray-bg)">
+                <td style="padding:9px 14px;text-align:center">16A</td>
+                <td style="padding:9px 14px;text-align:center">5 (3P+N+T)</td>
+                <td style="padding:9px 14px;text-align:center">&times;</td>
+                <td style="padding:9px 14px;text-align:center;font-weight:700">56</td>
+                <td style="padding:9px 14px;text-align:center">75</td>
+                <td style="padding:9px 14px;text-align:center">112</td>
+                <td style="padding:9px 14px;text-align:center">24</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:11px;color:var(--text-light);margin-bottom:24px">&#9664; Linha em destaque = configuração deste produto (4079/CK). Todas as dimensões em mm.</p>
+
+        <hr class="divider">
+
+        <div class="ds-section-title"><span class="material-symbols-outlined">checklist</span> Características e Vantagens</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin-bottom:24px">
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Facilidade de manutenção na troca de miolos</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Evita erros de inserção com tensões diferentes</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Não permite a inversão de polos</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Identificação de tensão pela cor (azul = 220V)</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Prensa-cabo evita que fios se soltem no contato</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Bitolas recomendadas: 2,5 mm² a 4,0 mm²</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Pinos maciços autocentrantes em latão niquelado</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Resistência a impactos: até &plusmn;6 joules nos ensaios</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Produção 100% interna em Nylon 6.6</div><div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid var(--gray-border)"><span class="material-symbols-outlined" style="font-size:16px;color:var(--red);flex-shrink:0;margin-top:1px;font-variation-settings:'FILL' 1">check_circle</span>Núcleos compactos — máximo rendimento nominal</div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="obs-grid">
+          <div class="obs-box">
+            <h4>Matéria Prima</h4>
+            <p>Miolo e Carcaça injetados internamente em termoplástico Nylon 6.6 auto-extinguível (Poliamida). Todos os componentes plásticos e contatos de latão são produzidos na fábrica STRAHL. Todo lote produzido é inspecionado e ensaiado com resultados registrados por pessoal competente.</p>
+          </div>
+          <div class="obs-box">
+            <h4>Conformidade Normativa</h4>
+            <div class="norm-badges" style="margin-bottom:12px">
+              <span class="norm-badge">NBR IEC 60309</span>
+              <span class="norm-badge">CEE 17</span>
+              <span class="norm-badge">VDE 0623</span>
+            </div>
+            <p style="font-size:12px;color:var(--text-muted)">* IP: grau de proteção definido conforme IEC 144, IEC 529 e Anexo 1 da norma NFC 20&nbsp;010.</p>
+            <p style="margin-top:10px;font-size:12px;color:var(--text-light);font-weight:700;text-transform:uppercase;letter-spacing:.08em">Materiais Elétricos STRAHL</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><img src="assets/images/logo_strahl.png" alt="STRAHL" class="footer-logo logo-white"><p class="footer-desc">Referência em engenharia elétrica de produto desde 1986.</p></div>
+        <div class="footer-col"><h4>Contato</h4><ul><li><span class="material-symbols-outlined">mail</span> vendas@strahl.com</li><li><a href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><span class="material-symbols-outlined">call</span> 11 2818-3838</a></li><li><a href="https://api.whatsapp.com/send/?phone=551128183838&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span> WhatsApp</a></li></ul></div>
+        <div class="footer-col"><h4>Links</h4><ul><li><a href="https://www.strahl.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined">language</span> strahl.com</a></li><li><a href="https://loja.strahl.com/" target="_blank" rel="noopener"><span class="material-symbols-outlined">storefront</span> lojastrahl.com</a></li><li>Privacidade</li><li>Compliance</li></ul></div>
+        <div class="footer-col"><h4>Localização</h4><ul><li><span class="material-symbols-outlined">location_on</span> São Paulo, SP — Brasil</li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Materiais Elétricos STRAHL. Todos os direitos reservados.</div>
+  </footer>
+
+</div><!-- /page-datasheet-4079 -->
+
+</body>
+</html>
