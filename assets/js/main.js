@@ -1,3 +1,11 @@
+  // ─── Mobile nav toggle ───
+  function toggleMobileNav() {
+    document.body.classList.toggle('nav-open');
+  }
+  function closeMobileNav() {
+    document.body.classList.remove('nav-open');
+  }
+
   // ─── Datasheet image switcher (3076) ───
   function dsSetImg(thumb, src) {
     document.querySelectorAll('#page-datasheet .ds-thumb').forEach(function(t) { t.classList.remove('active'); });
@@ -16,6 +24,7 @@
 
   // ─── Core page switcher ───
   function goTo(page) {
+    closeMobileNav();
     document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
     var target = document.getElementById('page-' + page);
     if (target) target.classList.add('active');
