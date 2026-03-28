@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Técnica — 4079/CK · STRAHL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      font-size: 11pt;
+      color: #1b1c1c;
+      background: #fff;
+    }
+
+    /* ── Print setup ── */
+    @page {
+      size: A4 portrait;
+      margin: 14mm 16mm 14mm 16mm;
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      body { font-size: 9.5pt; }
+      a { text-decoration: none; color: inherit; }
+      .page-break { page-break-before: always; }
+      .avoid-break { page-break-inside: avoid; }
+    }
+
+    /* ── Screen wrapper ── */
+    @media screen {
+      body { background: #e5e5e5; padding: 24px 0 40px; }
+      .sheet {
+        width: 210mm;
+        min-height: 297mm;
+        background: #fff;
+        margin: 0 auto;
+        padding: 14mm 16mm;
+        box-shadow: 0 2px 24px rgba(0,0,0,.18);
+      }
+    }
+
+    /* ── Print button (screen only) ── */
+    .print-bar {
+      width: 210mm;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn-print {
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      padding: 9px 20px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-print:hover { background: #a93226; }
+
+    /* ── Header ── */
+    .ds-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 3px solid #1a2744;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    .ds-header-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 26pt;
+      font-weight: 800;
+      color: #1a2744;
+      letter-spacing: -.02em;
+      line-height: 1;
+    }
+    .ds-header-logo span { color: #c0392b; }
+    .ds-header-right { text-align: right; }
+    .ds-header-tag {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #888;
+      margin-bottom: 2px;
+    }
+    .ds-header-ref {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #1a2744;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    .ds-header-title {
+      font-size: 13pt;
+      font-weight: 700;
+      color: #1a2744;
+      margin-top: 2px;
+    }
+    .ds-header-sub {
+      font-size: 8pt;
+      color: #666;
+      margin-top: 1px;
+    }
+
+    /* ── Product intro row ── */
+    .intro-row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 14px;
+      margin: 12px 0;
+      align-items: start;
+    }
+    .intro-img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 4px;
+    }
+    .intro-content {}
+    .linha-badge-print {
+      display: inline-block;
+      background: #1a2744;
+      color: #fff;
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 6px;
+    }
+    .intro-desc {
+      font-size: 9.5pt;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    /* ── Section title ── */
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #1a2744;
+      border-left: 3px solid #c0392b;
+      padding-left: 7px;
+      margin: 12px 0 7px;
+    }
+
+    /* ── Two-column specs grid ── */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid #d0d0d0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .specs-col { }
+    .specs-col:first-child { border-right: 1px solid #d0d0d0; }
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 9.5pt;
+    }
+    .specs-col:last-child .spec-row:last-child,
+    .specs-col:first-child .spec-row:last-child { border-bottom: none; }
+    .spec-label { color: #666; }
+    .spec-val { font-weight: 700; color: #1b1c1c; }
+    .spec-val.blue { color: #1a5faa; }
+
+    /* ── Protection badges ── */
+    .prot-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .prot-badge {
+      flex: 1;
+      background: #1a2744;
+      color: #fff;
+      border-radius: 4px;
+      padding: 7px 10px;
+      text-align: center;
+    }
+    .prot-badge.light { background: #f4f4f4; color: #1a2744; }
+    .pb-level { font-size: 14pt; font-weight: 800; font-family: 'Barlow Condensed', sans-serif; line-height: 1.1; }
+    .pb-desc { font-size: 7.5pt; margin-top: 2px; opacity: .8; }
+
+    /* ── Features grid ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 18px;
+      margin-bottom: 10px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      font-size: 9pt;
+      color: #444;
+      padding: 4px 0;
+      border-bottom: 1px solid #ececec;
+    }
+    .feature-check {
+      color: #c0392b;
+      font-size: 10pt;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Differentials ── */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .diff-item {
+      background: #f7f8fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 8px 10px;
+    }
+    .diff-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #1a2744;
+      margin-bottom: 3px;
+    }
+    .diff-desc { font-size: 8pt; color: #555; line-height: 1.4; }
+
+    /* ── SVG drawing ── */
+    .drawing-box {
+      border: 1px solid #d0d0d0;
+      border-radius: 4px;
+      padding: 12px;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+    .drawing-label {
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #888;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* ── Dims table ── */
+    table.dims {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin-bottom: 6px;
+    }
+    table.dims thead tr { background: #1a2744; }
+    table.dims thead th {
+      padding: 6px 8px;
+      color: rgba(255,255,255,.85);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      text-align: center;
+    }
+    table.dims tbody tr:nth-child(odd) { background: #f7f8fa; }
+    table.dims tbody tr.highlight-row { background: #fff5f4; }
+    table.dims tbody td {
+      padding: 6px 8px;
+      text-align: center;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 9pt;
+    }
+    table.dims tbody td.highlight { font-weight: 700; color: #c0392b; }
+
+    /* ── Obs / conformidade ── */
+    .obs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .obs-box {
+      background: #f7f8fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 10px 12px;
+    }
+    .obs-box h4 { font-size: 9pt; font-weight: 700; color: #1a2744; margin-bottom: 5px; }
+    .obs-box p { font-size: 8pt; color: #555; line-height: 1.5; }
+    .norm-badges { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 6px; }
+    .norm-badge {
+      background: #1a2744;
+      color: #fff;
+      font-size: 7.5pt;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+
+    /* ── Footer ── */
+    .ds-footer {
+      border-top: 2px solid #1a2744;
+      padding-top: 7px;
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.5pt;
+      color: #888;
+    }
+    .ds-footer strong { color: #1a2744; }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print / Screen bar -->
+  <div class="print-bar no-print">
+    <button class="btn-print" onclick="window.print()">
+      &#x2399; Imprimir / Salvar PDF
+    </button>
+    <button class="btn-print" style="background:#1a2744" onclick="window.close()">
+      ✕ Fechar
+    </button>
+  </div>
+
+  <div class="sheet">
+
+    <!-- ── CABEÇALHO ── -->
+    <div class="ds-header avoid-break">
+      <div>
+        <img src="../images/logo_strahl.png" alt="STRAHL" style="height:38px;display:block;margin-bottom:2px">
+        <div class="ds-header-tag">Ficha Técnica de Produto · Linha Cekton®</div>
+        <div class="ds-header-title">Plugue Industrial 16A 3P+T 9H 220–240V</div>
+        <div class="ds-header-sub">Produção 100% nacional · NBR IEC 60309</div>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-header-tag">Código de Referência</div>
+        <div class="ds-header-ref">REF: 4079/CK</div>
+        <div class="ds-header-sub" style="margin-top:4px">Emissão: 2026 &nbsp;·&nbsp; Rev. A</div>
+      </div>
+    </div>
+
+    <!-- ── INTRO ── -->
+    <div class="intro-row avoid-break">
+      <img class="intro-img" src="../images/cekton/produto_4079ck_principal.jpg" alt="Plugue 4079/CK">
+      <div class="intro-content">
+        <div class="linha-badge-print">Linha CEKTON®</div>
+        <p class="intro-desc">
+          Plugue industrial para uso em redes 220–240V trifásicas com terra. Corpo em Nylon 6.6 auto-extinguível cor azul (identifica visualmente a tensão), pinos de latão maciço niquelado autocentrantes e pino terra prioritário (conecta antes / desconecta depois). Quatro polos (3P+T), posição horária 9h. Grau de proteção IP 44, proteção mecânica IK05. Compatível com tomadas industriais da série Cekton e com o padrão internacional CEE 17 / VDE 0623.
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── ESPECIFICAÇÕES ELÉTRICAS ── -->
+    <div class="section-title">Especificações Elétricas e Técnicas</div>
+    <div class="specs-grid avoid-break">
+      <div class="specs-col">
+        <div class="spec-row"><span class="spec-label">Tensão de Utilização</span><span class="spec-val blue">220–240V</span></div>
+        <div class="spec-row"><span class="spec-label">Corrente Nominal</span><span class="spec-val">16A</span></div>
+        <div class="spec-row"><span class="spec-label">Nº de Pólos</span><span class="spec-val">3P + T (4 pinos)</span></div>
+        <div class="spec-row"><span class="spec-label">Posição Pino Terra</span><span class="spec-val">9h</span></div>
+        <div class="spec-row"><span class="spec-label">Temperatura de Trabalho</span><span class="spec-val">−20°C a +120°C</span></div>
+      </div>
+      <div class="specs-col">
+        <div class="spec-row"><span class="spec-label">Grau de Proteção</span><span class="spec-val">IP 44</span></div>
+        <div class="spec-row"><span class="spec-label">Proteção Mecânica</span><span class="spec-val">IK05</span></div>
+        <div class="spec-row"><span class="spec-label">Matéria Prima</span><span class="spec-val">Nylon 6.6 (Poliamida)</span></div>
+        <div class="spec-row"><span class="spec-label">Prensa-cabo</span><span class="spec-val">PG 16 (não incluso)</span></div>
+        <div class="spec-row"><span class="spec-label">Conformidade Normativa</span><span class="spec-val">NBR IEC 60309</span></div>
+      </div>
+    </div>
+
+    <div class="prot-row avoid-break">
+      <div class="prot-badge">
+        <div class="pb-level">IP44</div>
+        <div class="pb-desc">Sólidos &gt;1mm · Respingos<br>todas as direções</div>
+      </div>
+      <div class="prot-badge light">
+        <div class="pb-level">IK05</div>
+        <div class="pb-desc">Impacto mecânico<br>até 2,00 joules</div>
+      </div>
+      <div class="prot-badge light">
+        <div class="pb-level" style="font-size:11pt;padding-top:2px">NBR IEC<br>60309</div>
+        <div class="pb-desc">CEE 17 · VDE 0623</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── DESENHOS TÉCNICOS ── -->
+    <div class="section-title">Desenhos Técnicos e Dimensões (mm)</div>
+    <div class="drawing-box avoid-break">
+      <div class="drawing-label">Vista Técnica — 16A · 3P+T (4 Polos) · Posição Terra 9h</div>
+      <svg viewBox="0 0 640 235" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:0 auto" font-family="Barlow,sans-serif">
+        <!-- SIDE VIEW -->
+        <line x1="38" y1="26" x2="38" y2="178" stroke="#333" stroke-width="1"/>
+        <polygon points="35,26 41,26 38,19" fill="#333"/>
+        <polygon points="35,178 41,178 38,185" fill="#333"/>
+        <line x1="36" y1="26" x2="58" y2="26" stroke="#333" stroke-width=".8"/>
+        <line x1="36" y1="178" x2="58" y2="178" stroke="#333" stroke-width=".8"/>
+        <rect x="24" y="92" width="28" height="16" fill="#f4f4f4"/>
+        <text x="38" y="103" text-anchor="middle" font-size="12" font-weight="700" fill="#1b1c1c">L=112</text>
+        <line x1="52" y1="45" x2="52" y2="178" stroke="#333" stroke-width="1"/>
+        <polygon points="49,45 55,45 52,38" fill="#333"/>
+        <polygon points="49,178 55,178 52,185" fill="#333"/>
+        <line x1="50" y1="45" x2="70" y2="45" stroke="#333" stroke-width=".8"/>
+        <rect x="37" y="128" width="28" height="14" fill="#f4f4f4"/>
+        <text x="52" y="139" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">g=75</text>
+        <rect x="66" y="26" width="44" height="18" rx="2" fill="none" stroke="#333" stroke-width="1.5"/>
+        <line x1="72" y1="26" x2="72" y2="44" stroke="#aaa" stroke-width=".8"/>
+        <line x1="78" y1="26" x2="78" y2="44" stroke="#aaa" stroke-width=".8"/>
+        <line x1="84" y1="26" x2="84" y2="44" stroke="#aaa" stroke-width=".8"/>
+        <line x1="90" y1="26" x2="90" y2="44" stroke="#aaa" stroke-width=".8"/>
+        <line x1="96" y1="26" x2="96" y2="44" stroke="#aaa" stroke-width=".8"/>
+        <line x1="102" y1="26" x2="102" y2="44" stroke="#aaa" stroke-width=".8"/>
+        <rect x="58" y="44" width="60" height="13" rx="2" fill="none" stroke="#333" stroke-width="1.5"/>
+        <path d="M68,57 L62,128 L68,158 L88,170 L108,158 L114,128 L108,57 Z" fill="none" stroke="#333" stroke-width="1.8"/>
+        <line x1="88" y1="20" x2="88" y2="196" stroke="#333" stroke-width=".7" stroke-dasharray="6,3"/>
+        <rect x="80" y="98" width="16" height="22" rx="1" fill="none" stroke="#555" stroke-width="1.1"/>
+        <path d="M74,158 L70,175 L82,177 L82,158" fill="none" stroke="#333" stroke-width="1.3"/>
+        <ellipse cx="114" cy="113" rx="8" ry="24" fill="#eee" stroke="#333" stroke-width="1.5"/>
+        <line x1="108" y1="98" x2="120" y2="98" stroke="#555" stroke-width=".9"/>
+        <line x1="108" y1="108" x2="120" y2="108" stroke="#555" stroke-width=".9"/>
+        <line x1="108" y1="118" x2="120" y2="118" stroke="#555" stroke-width=".9"/>
+        <line x1="108" y1="128" x2="120" y2="128" stroke="#555" stroke-width=".9"/>
+        <!-- cota E=50 -->
+        <line x1="68" y1="197" x2="122" y2="197" stroke="#333" stroke-width="1"/>
+        <polygon points="68,194 68,200 61,197" fill="#333"/>
+        <polygon points="122,194 122,200 129,197" fill="#333"/>
+        <line x1="68" y1="189" x2="68" y2="201" stroke="#333" stroke-width=".8"/>
+        <line x1="122" y1="189" x2="122" y2="201" stroke="#333" stroke-width=".8"/>
+        <text x="95" y="214" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">E = 50</text>
+        <!-- FRONT VIEW — 4 pinos, terra 9h (esquerda) -->
+        <circle cx="390" cy="108" r="68" fill="#f5f5f5" stroke="#333" stroke-width="1.8"/>
+        <circle cx="390" cy="108" r="52" fill="none" stroke="#bbb" stroke-width="1"/>
+        <circle cx="390" cy="108" r="35" fill="#1a1a1a" stroke="#333" stroke-width="1.3"/>
+        <line x1="322" y1="108" x2="322" y2="52" stroke="#555" stroke-width=".8" stroke-dasharray="3,2"/>
+        <line x1="458" y1="108" x2="458" y2="52" stroke="#555" stroke-width=".8" stroke-dasharray="3,2"/>
+        <line x1="324" y1="56" x2="456" y2="56" stroke="#333" stroke-width="1"/>
+        <polygon points="324,53 324,59 317,56" fill="#333"/>
+        <polygon points="456,53 456,59 463,56" fill="#333"/>
+        <text x="390" y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#1b1c1c">K = Ø22</text>
+        <!-- Terra at 9h (left) -->
+        <circle cx="355" cy="108" r="9.5" fill="#c0c0c0" stroke="#888" stroke-width="1.5"/>
+        <circle cx="355" cy="108" r="4" fill="#444"/>
+        <!-- L1 at ~1h -->
+        <circle cx="416" cy="82" r="7" fill="#c0c0c0" stroke="#888" stroke-width="1.2"/>
+        <circle cx="416" cy="82" r="3" fill="#444"/>
+        <!-- L2 at ~5h -->
+        <circle cx="416" cy="134" r="7" fill="#c0c0c0" stroke="#888" stroke-width="1.2"/>
+        <circle cx="416" cy="134" r="3" fill="#444"/>
+        <!-- N at ~11h -->
+        <circle cx="376" cy="76" r="7" fill="#c0c0c0" stroke="#888" stroke-width="1.2"/>
+        <circle cx="376" cy="76" r="3" fill="#444"/>
+        <!-- 9h label -->
+        <line x1="390" y1="108" x2="357" y2="108" stroke="#c23020" stroke-width="1.5"/>
+        <circle cx="348" cy="108" r="4" fill="none" stroke="#c23020" stroke-width="1.3"/>
+        <text x="336" y="100" font-size="10" fill="#c23020" font-weight="700">9h</text>
+        <circle cx="390" cy="108" r="3" fill="#666"/>
+        <line x1="220" y1="18" x2="220" y2="212" stroke="#ddd" stroke-width="1" stroke-dasharray="5,4"/>
+        <text x="130" y="222" text-anchor="middle" font-size="11" fill="#888" font-weight="600">VISTA LATERAL</text>
+        <text x="390" y="222" text-anchor="middle" font-size="11" fill="#888" font-weight="600">VISTA FRONTAL (FACE DE PINOS)</text>
+      </svg>
+    </div>
+
+    <table class="dims avoid-break">
+      <thead>
+        <tr>
+          <th>IN (A)</th>
+          <th>Polos</th>
+          <th>A</th>
+          <th>E (mm)</th>
+          <th>G (mm)</th>
+          <th>L (mm)</th>
+          <th>K (Ø mm)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>16A</td>
+          <td>3 (2P+T)</td>
+          <td>×</td>
+          <td>43,5</td>
+          <td>75</td>
+          <td>112</td>
+          <td>21,5</td>
+        </tr>
+        <tr class="highlight-row">
+          <td class="highlight">16A</td>
+          <td class="highlight">4 (3P+T) ◄</td>
+          <td>×</td>
+          <td class="highlight">50</td>
+          <td>75</td>
+          <td>112</td>
+          <td class="highlight">22</td>
+        </tr>
+        <tr>
+          <td>16A</td>
+          <td>5 (3P+N+T)</td>
+          <td>×</td>
+          <td>56</td>
+          <td>75</td>
+          <td>112</td>
+          <td>24</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.5pt;color:#888;margin-bottom:8px">◄ Linha em destaque = configuração deste produto (4079/CK). Todas as dimensões em milímetros (mm).</p>
+
+    <hr class="divider">
+
+    <!-- ── DIFERENCIAIS TÉCNICOS ── -->
+    <div class="section-title">Diferenciais Técnicos</div>
+    <div class="diff-grid avoid-break">
+      <div class="diff-item">
+        <div class="diff-title">Núcleos Compactos</div>
+        <p class="diff-desc">Design e material garantem rendimento máximo aos valores nominais e resistem a esforços mecânicos e térmicos.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Bornes Integrados</div>
+        <p class="diff-desc">Formam uma só peça com buchas e pinos de contato, resultando em melhor continuidade e fixação dos condutores.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Pinos Niquelados</div>
+        <p class="diff-desc">Latão maciço niquelado — peça única. Contato perfeito, alta resistência à abrasão e oxidação. Pinos autocentrantes.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Pino Terra Prioritário</div>
+        <p class="diff-desc">Diâmetro maior: conecta antes e desconecta depois, garantindo máxima segurança em todas as manobras.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Carcaça Nylon 6.6</div>
+        <p class="diff-desc">Auto-extinguível, resistente à abrasão. Cor azul identifica a tensão 220–240V. Facilita manutenção.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Passa-Cabo PG 16</div>
+        <p class="diff-desc">Hermeticidade perfeita ao condutor. Impede entrada de pó/água. Bitolas: 2,5 a 4,0 mm².</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── CARACTERÍSTICAS ── -->
+    <div class="section-title">Características e Vantagens</div>
+    <div class="features-grid avoid-break">
+      <div class="feature-item"><span class="feature-check">✔</span> Facilidade de manutenção na troca de miolos</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Evita erros de inserção com tensões diferentes</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Não permite a inversão de polos</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Identificação de tensão pela cor (azul = 220V)</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Prensa-cabo evita que fios se soltem no contato</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Bitolas recomendadas: 2,5 mm² a 4,0 mm²</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Pinos maciços autocentrantes em latão niquelado</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Resistência a impactos: até ±6 joules nos ensaios</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Produção 100% interna (Nylon 6.6 injetado na fábrica)</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Núcleos compactos — máximo rendimento nominal</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── CONFORMIDADE ── -->
+    <div class="section-title">Matéria Prima e Conformidade Normativa</div>
+    <div class="obs-grid avoid-break">
+      <div class="obs-box">
+        <h4>Matéria Prima</h4>
+        <p>Miolo e Carcaça injetados internamente em termoplástico Nylon 6.6 auto-extinguível (Poliamida). Todos os componentes plásticos e contatos de latão são produzidos na fábrica STRAHL, em conformidade com os requisitos regulamentares e estatutários pertinentes. Todo lote produzido é inspecionado e ensaiado com resultados registrados por pessoal competente.</p>
+      </div>
+      <div class="obs-box">
+        <h4>Conformidade Normativa</h4>
+        <div class="norm-badges">
+          <span class="norm-badge">NBR IEC 60309</span>
+          <span class="norm-badge">CEE 17</span>
+          <span class="norm-badge">VDE 0623</span>
+        </div>
+        <p>* IP: grau de proteção dos invólucros de materiais elétricos. Os dois primeiros algarismos são definidos conforme IEC 144 e IEC 529; o terceiro algarismo conforme o Anexo 1 da norma NFC 20 010.</p>
+        <p style="margin-top:6px;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888">Materiais Elétricos STRAHL</p>
+      </div>
+    </div>
+
+    <!-- ── RODAPÉ ── -->
+    <div class="ds-footer">
+      <div>
+        <strong>Materiais Elétricos STRAHL</strong> &nbsp;·&nbsp;
+        São Paulo, SP — Brasil &nbsp;·&nbsp;
+        11 2818-3838 &nbsp;·&nbsp; vendas@strahl.com
+      </div>
+      <div>
+        REF: 4079/CK &nbsp;·&nbsp; Rev. A &nbsp;·&nbsp; 2026 &nbsp;·&nbsp;
+        <strong>strahl.com</strong>
+      </div>
+    </div>
+
+  </div><!-- /sheet -->
+
+  <script>
+    // Auto-open print dialog when accessed directly (optional — remove if not desired)
+    // window.addEventListener('load', function() { window.print(); });
+  </script>
+</body>
+</html>
