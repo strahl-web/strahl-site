@@ -1438,4 +1438,6 @@
 
   /* Ícones em seções de fundo escuro (rodapés e testeiras navy) */
   footer .icon-navy,
-  .tech-section .icon-navy { filter: brightness(0) invert(1); }
+  .tech-section .icon-navy { filter: brightness(0) invert(1) opacity(.75); }
+  footer li:hover .icon-navy,
+  .tech-section li:hover .icon-navy { filter: brightness(0) invert(1); }
