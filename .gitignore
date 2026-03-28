@@ -1,3 +1,6 @@
 .DS_Store
 assets/.DS_Store
 .claude/
+
+# PDFs de referência interna — não disponibilizar publicamente
+assets/datasheets/*.pdf
