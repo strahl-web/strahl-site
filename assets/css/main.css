@@ -779,6 +779,7 @@
     align-items: center;
     gap: 0;
   }
+  .ds-nav-tabs { display: flex; align-items: center; }
   .ds-nav-btn {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
@@ -1089,8 +1090,6 @@
   .mobile-nav-subhd {
     padding: 13px 24px 13px 20px;
     font-size: 15px;
-    text-transform: none;
-    letter-spacing: 0;
     color: var(--text-muted);
     background: var(--gray-bg);
     border-top: 1px solid var(--gray-border);
@@ -1214,8 +1213,12 @@
     .ds-ref { text-align: left; }
     .ds-ref .ref-num { font-size: 28px; }
     .ds-header h1 { font-size: 24px; }
-    .ds-nav-bar-inner { overflow-x: auto; padding: 0 20px; -webkit-overflow-scrolling: touch; white-space: nowrap; }
-    .ds-download { font-size: 11px; padding: 8px 14px; }
+    /* Datasheet nav: tabs scrollam, botões de ação em linha separada */
+    .ds-nav-bar-inner { flex-wrap: wrap; overflow: visible; padding: 0; white-space: normal; }
+    .ds-nav-tabs { display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; width: 100%; }
+    .ds-nav-tabs .ds-nav-btn { flex-shrink: 0; }
+    .ds-nav-actions { width: 100%; margin-left: 0 !important; padding: 8px 16px 10px; gap: 6px; flex-wrap: wrap; border-top: 1px solid var(--gray-border); display: flex !important; align-items: center; }
+    .ds-download { font-size: 11px; padding: 8px 14px; flex-shrink: 0; }
     .ds-body { padding: 20px; }
     .ds-grid { grid-template-columns: 1fr; gap: 24px; }
     .ds-img-panel { position: static; }
