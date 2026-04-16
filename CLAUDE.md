@@ -22,6 +22,7 @@ strahl-site/
 | page-cekton | Linha Cekton — tabelas de SKUs e produtos |
 | page-datasheet | Datasheet 3076/CK |
 | page-datasheet-4079 | Datasheet 4079/CK |
+| page-datasheet-5276 | Datasheet 5276/CK — **a implementar** (ver seção abaixo) |
 
 ## Navegação
 Feita por JS puro via `goTo('nome-da-pagina')`.
@@ -42,6 +43,7 @@ Novas páginas devem:
 - residencial.jpg — card setor Comercial/Residencial
 - produto_3076ck_*.jpg — fotos e thumbs do datasheet 3076/CK
 - produto_4079ck_*.jpg — fotos e thumbs do datasheet 4079/CK
+- produto_5276ck_*.jpg — fotos e thumbs do datasheet 5276/CK (a adicionar — originais no Google Drive)
 
 ## Padrão visual
 - Cores principais: vermelho (#c0392b), azul-marinho (#1a2744), branco
@@ -59,3 +61,20 @@ Novas páginas devem:
 STRAHL é fabricante brasileiro de materiais elétricos industriais.
 Linha Cekton = plugues e tomadas industriais (principal linha do site).
 3076/CK = plugue 16A 2P+T / 4079/CK = plugue 125A 3P+T Alta Corrente.
+
+## Padrão de imagens para datasheets
+Cada datasheet usa 5 imagens em assets/images/, todas com prefixo `produto_CODIGOCK_`:
+- `produto_CODIGOCK_principal.jpg` — foto principal exibida no topo (tamanho grande)
+- `produto_CODIGOCK_principal_thumb.jpg` — miniatura da foto principal
+- `produto_CODIGOCK_frente_thumb.jpg` — miniatura vista frontal
+- `produto_CODIGOCK_lateral_thumb.jpg` — miniatura vista lateral
+- `produto_CODIGOCK_traseira_thumb.jpg` — miniatura vista traseira
+
+As imagens originais do 5276/CK estão em:
+Google Drive strahlmkt@gmail.com → STRAHL-Site/Datasheets/Referencias/5276zCK/
+
+## Workflow de novos datasheets (equipe)
+Valeska trabalha em branch separado e abre PR para aprovação do Ismael.
+Guia completo: Google Drive → STRAHL-Site/Datasheets/Referencias/5276zCK/COMO-USAR.md
+Branch padrão: `datasheet/CODIGOCK` — nunca commitar direto no main.
+Repositório: github.com/strahl-web/strahl-site

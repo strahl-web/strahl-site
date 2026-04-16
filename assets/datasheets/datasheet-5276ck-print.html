@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Técnica — 5276/CK · STRAHL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      font-size: 11pt;
+      color: #1b1c1c;
+      background: #fff;
+    }
+
+    /* ── Print setup ── */
+    @page {
+      size: A4 portrait;
+      margin: 14mm 16mm 14mm 16mm;
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      body { font-size: 9.5pt; }
+      a { text-decoration: none; color: inherit; }
+      .page-break { page-break-before: always; }
+      .avoid-break { page-break-inside: avoid; }
+    }
+
+    /* ── Screen wrapper ── */
+    @media screen {
+      body { background: #e5e5e5; padding: 24px 0 40px; }
+      .sheet {
+        width: 210mm;
+        min-height: 297mm;
+        background: #fff;
+        margin: 0 auto;
+        padding: 14mm 16mm;
+        box-shadow: 0 2px 24px rgba(0,0,0,.18);
+      }
+    }
+
+    /* ── Print button (screen only) ── */
+    .print-bar {
+      width: 210mm;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn-print {
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      padding: 9px 20px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-print:hover { background: #a93226; }
+
+    /* ── Header ── */
+    .ds-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 3px solid #1a2744;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    .ds-header-right { text-align: right; }
+    .ds-header-tag {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #888;
+      margin-bottom: 2px;
+    }
+    .ds-header-ref {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #1a2744;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    .ds-header-title {
+      font-size: 13pt;
+      font-weight: 700;
+      color: #1a2744;
+      margin-top: 2px;
+    }
+    .ds-header-sub {
+      font-size: 8pt;
+      color: #666;
+      margin-top: 1px;
+    }
+
+    /* ── Product intro row ── */
+    .intro-row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 14px;
+      margin: 12px 0;
+      align-items: start;
+    }
+    .intro-img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 4px;
+    }
+    .linha-badge-print {
+      display: inline-block;
+      background: #1a2744;
+      color: #fff;
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 6px;
+    }
+    .intro-desc {
+      font-size: 9.5pt;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    /* ── Section title ── */
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #1a2744;
+      border-left: 3px solid #c0392b;
+      padding-left: 7px;
+      margin: 12px 0 7px;
+    }
+
+    /* ── Two-column specs grid ── */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid #d0d0d0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .specs-col:first-child { border-right: 1px solid #d0d0d0; }
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 9.5pt;
+    }
+    .specs-col:last-child .spec-row:last-child,
+    .specs-col:first-child .spec-row:last-child { border-bottom: none; }
+    .spec-label { color: #666; }
+    .spec-val { font-weight: 700; color: #1b1c1c; }
+    .spec-val.red { color: #c0392b; }
+
+    /* ── Protection badges ── */
+    .prot-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .prot-badge {
+      flex: 1;
+      background: #c0392b;
+      color: #fff;
+      border-radius: 4px;
+      padding: 7px 10px;
+      text-align: center;
+    }
+    .prot-badge.light { background: #f4f4f4; color: #1a2744; }
+    .pb-level { font-size: 14pt; font-weight: 800; font-family: 'Barlow Condensed', sans-serif; line-height: 1.1; }
+    .pb-desc { font-size: 7.5pt; margin-top: 2px; opacity: .8; }
+
+    /* ── Features grid ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 18px;
+      margin-bottom: 10px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      font-size: 9pt;
+      color: #444;
+      padding: 4px 0;
+      border-bottom: 1px solid #ececec;
+    }
+    .feature-check {
+      color: #c0392b;
+      font-size: 10pt;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Differentials ── */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .diff-item {
+      background: #f7f8fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 8px 10px;
+    }
+    .diff-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #1a2744;
+      margin-bottom: 3px;
+    }
+    .diff-desc { font-size: 8pt; color: #555; line-height: 1.4; }
+
+    /* ── SVG drawing ── */
+    .drawing-box {
+      border: 1px solid #d0d0d0;
+      border-radius: 4px;
+      padding: 12px;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+    .drawing-label {
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #888;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* ── Dims table ── */
+    table.dims {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin-bottom: 6px;
+    }
+    table.dims thead tr { background: #1a2744; }
+    table.dims thead th {
+      padding: 6px 8px;
+      color: rgba(255,255,255,.85);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      text-align: center;
+    }
+    table.dims tbody tr:nth-child(odd) { background: #f7f8fa; }
+    table.dims tbody tr.highlight-row { background: #fff5f4; }
+    table.dims tbody td {
+      padding: 6px 8px;
+      text-align: center;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 9pt;
+    }
+    table.dims tbody td.highlight { font-weight: 700; color: #c0392b; }
+
+    /* ── Obs / conformidade ── */
+    .obs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .obs-box {
+      background: #f7f8fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 10px 12px;
+    }
+    .obs-box h4 { font-size: 9pt; font-weight: 700; color: #1a2744; margin-bottom: 5px; }
+    .obs-box p { font-size: 8pt; color: #555; line-height: 1.5; }
+    .norm-badges { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 6px; }
+    .norm-badge {
+      background: #1a2744;
+      color: #fff;
+      font-size: 7.5pt;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+
+    /* ── Footer ── */
+    .ds-footer {
+      border-top: 2px solid #1a2744;
+      padding-top: 7px;
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.5pt;
+      color: #888;
+    }
+    .ds-footer strong { color: #1a2744; }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print / Screen bar -->
+  <div class="print-bar no-print">
+    <button class="btn-print" onclick="window.print()">
+      &#x2399; Imprimir / Salvar PDF
+    </button>
+    <button class="btn-print" style="background:#1a2744" onclick="window.close()">
+      ✕ Fechar
+    </button>
+  </div>
+
+  <div class="sheet">
+
+    <!-- ── CABEÇALHO ── -->
+    <div class="ds-header avoid-break">
+      <div>
+        <img src="../images/logo_strahl.png" alt="STRAHL" style="height:38px;display:block;margin-bottom:2px">
+        <div class="ds-header-tag">Ficha Técnica de Produto · Linha Cekton®</div>
+        <div class="ds-header-title">Plugue Industrial 32A 3P+N+T 6H 380&ndash;440V</div>
+        <div class="ds-header-sub">Produção 100% nacional · NBR IEC 60309</div>
+      </div>
+      <div class="ds-header-right">
+        <div class="ds-header-tag">Código de Referência</div>
+        <div class="ds-header-ref">REF: 5276/CK</div>
+        <div class="ds-header-sub" style="margin-top:4px">Emissão: 2026 &nbsp;·&nbsp; Rev. A</div>
+      </div>
+    </div>
+
+    <!-- ── INTRO ── -->
+    <div class="intro-row avoid-break">
+      <img class="intro-img" src="../images/cekton/produto_5276ck_principal.jpg" alt="Plugue 5276/CK">
+      <div class="intro-content">
+        <div class="linha-badge-print">Linha CEKTON®</div>
+        <p class="intro-desc">
+          Plugue industrial para uso em redes 380&ndash;440V trifásicas com neutro e terra. Corpo em Nylon 6.6 auto-extinguível cor vermelha (identifica visualmente a tensão 380V), pinos de latão maciço niquelado autocentrantes e pino terra prioritário (conecta antes / desconecta depois). Cinco polos (3P+N+T), posição horária 6h. Grau de proteção IP 447, proteção mecânica IK05. Compatível com tomadas industriais da série Cekton e com o padrão internacional CEE 17 / VDE 0623.
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── ESPECIFICAÇÕES ELÉTRICAS ── -->
+    <div class="section-title">Especificações Elétricas e Técnicas</div>
+    <div class="specs-grid avoid-break">
+      <div class="specs-col">
+        <div class="spec-row"><span class="spec-label">Tensão de Utilização</span><span class="spec-val red">380&ndash;440V</span></div>
+        <div class="spec-row"><span class="spec-label">Corrente Nominal</span><span class="spec-val">32A</span></div>
+        <div class="spec-row"><span class="spec-label">Nº de Pólos</span><span class="spec-val">3P + N + T (5 pinos)</span></div>
+        <div class="spec-row"><span class="spec-label">Posição Pino Terra</span><span class="spec-val">6h</span></div>
+        <div class="spec-row"><span class="spec-label">Temperatura de Trabalho</span><span class="spec-val">&minus;20&deg;C a +120&deg;C</span></div>
+      </div>
+      <div class="specs-col">
+        <div class="spec-row"><span class="spec-label">Grau de Proteção</span><span class="spec-val">IP 447</span></div>
+        <div class="spec-row"><span class="spec-label">Proteção Mecânica</span><span class="spec-val">IK05</span></div>
+        <div class="spec-row"><span class="spec-label">Matéria Prima</span><span class="spec-val">Nylon 6.6 (Poliamida)</span></div>
+        <div class="spec-row"><span class="spec-label">Prensa-cabo</span><span class="spec-val">PG 21 (não incluso)</span></div>
+        <div class="spec-row"><span class="spec-label">Conformidade Normativa</span><span class="spec-val">NBR IEC 60309</span></div>
+      </div>
+    </div>
+
+    <div class="prot-row avoid-break">
+      <div class="prot-badge">
+        <div class="pb-level">IP447</div>
+        <div class="pb-desc">Sólidos &gt;1mm · Respingos<br>todas as direções · IK07</div>
+      </div>
+      <div class="prot-badge light">
+        <div class="pb-level">IK05</div>
+        <div class="pb-desc">Impacto mecânico<br>até 6,00 joules</div>
+      </div>
+      <div class="prot-badge light">
+        <div class="pb-level" style="font-size:11pt;padding-top:2px">NBR IEC<br>60309</div>
+        <div class="pb-desc">CEE 17 · VDE 0623</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── DESENHOS TÉCNICOS ── -->
+    <div class="section-title">Desenhos Técnicos e Dimensões (mm)</div>
+    <div class="drawing-box avoid-break">
+      <div class="drawing-label">Vista Técnica — 32A · 3P+N+T (5 Polos) · Posição Terra 6h (inferior)</div>
+      <svg viewBox="0 0 620 315" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:0 auto" font-family="Barlow Condensed,sans-serif">
+
+        <!-- ── CENTROID AXES ── -->
+        <line x1="175" y1="42" x2="175" y2="283" stroke="#ccc" stroke-width=".7" stroke-dasharray="5,3"/>
+        <line x1="460" y1="42" x2="460" y2="283" stroke="#ccc" stroke-width=".7" stroke-dasharray="5,3"/>
+
+        <!-- ══ VISTA FRONTAL (esquerda) ══ -->
+        <path d="M127,50 H223 V90 H230 V115 L220,255 H199 V275 H151 V255 H130 L120,115 V90 H127 Z"
+              fill="#f7f7f7" stroke="#333" stroke-width="1.8" stroke-linejoin="miter"/>
+        <rect x="169" y="55" width="12" height="22" rx="1" fill="white" stroke="#444" stroke-width="1.1"/>
+        <line x1="127" y1="90" x2="230" y2="90" stroke="#666" stroke-width=".8"/>
+        <line x1="120" y1="115" x2="230" y2="115" stroke="#666" stroke-width=".8"/>
+
+        <!-- Cota E -->
+        <line x1="127" y1="37" x2="223" y2="37" stroke="#333" stroke-width=".9"/>
+        <polygon points="127,34 127,40 120,37" fill="#333"/>
+        <polygon points="223,34 223,40 230,37" fill="#333"/>
+        <line x1="127" y1="37" x2="127" y2="52" stroke="#333" stroke-width=".7"/>
+        <line x1="223" y1="37" x2="223" y2="52" stroke="#333" stroke-width=".7"/>
+        <text x="175" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#222">E</text>
+
+        <!-- Cota K -->
+        <line x1="151" y1="287" x2="199" y2="287" stroke="#333" stroke-width=".9"/>
+        <polygon points="151,284 151,290 144,287" fill="#333"/>
+        <polygon points="199,284 199,290 206,287" fill="#333"/>
+        <line x1="151" y1="275" x2="151" y2="289" stroke="#333" stroke-width=".7"/>
+        <line x1="199" y1="275" x2="199" y2="289" stroke="#333" stroke-width=".7"/>
+        <text x="175" y="304" text-anchor="middle" font-size="14" font-weight="700" fill="#222">K</text>
+
+        <!-- ══ VISTA LATERAL (direita) ══ -->
+        <path d="M412,50 H508 V90 H515 V115 L505,255 H484 V275 H436 V255 H415 L405,115 V90 H412 Z"
+              fill="#f7f7f7" stroke="#333" stroke-width="1.8" stroke-linejoin="miter"/>
+        <rect x="454" y="55" width="12" height="22" rx="1" fill="white" stroke="#444" stroke-width="1.1"/>
+        <line x1="412" y1="90" x2="515" y2="90" stroke="#666" stroke-width=".8"/>
+        <line x1="405" y1="115" x2="515" y2="115" stroke="#666" stroke-width=".8"/>
+        <rect x="505" y="140" width="15" height="48" rx="2" fill="#efefef" stroke="#555" stroke-width="1.1"/>
+
+        <!-- Cota L -->
+        <line x1="385" y1="50" x2="385" y2="255" stroke="#333" stroke-width=".9"/>
+        <polygon points="382,50 388,50 385,43" fill="#333"/>
+        <polygon points="382,255 388,255 385,262" fill="#333"/>
+        <line x1="385" y1="50" x2="412" y2="50" stroke="#333" stroke-width=".7"/>
+        <line x1="385" y1="255" x2="415" y2="255" stroke="#333" stroke-width=".7"/>
+        <rect x="369" y="143" width="32" height="17" fill="white"/>
+        <text x="385" y="156" text-anchor="middle" font-size="14" font-weight="700" fill="#222">L</text>
+
+        <!-- Cota G -->
+        <line x1="545" y1="115" x2="545" y2="255" stroke="#333" stroke-width=".9"/>
+        <polygon points="542,115 548,115 545,108" fill="#333"/>
+        <polygon points="542,255 548,255 545,262" fill="#333"/>
+        <line x1="515" y1="115" x2="547" y2="115" stroke="#333" stroke-width=".7"/>
+        <line x1="505" y1="255" x2="547" y2="255" stroke="#333" stroke-width=".7"/>
+        <rect x="529" y="173" width="32" height="17" fill="white"/>
+        <text x="545" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#222">G</text>
+
+        <!-- Divisor central -->
+        <line x1="318" y1="35" x2="318" y2="293" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,4"/>
+        <text x="175" y="310" text-anchor="middle" font-size="11" fill="#888" font-weight="600" letter-spacing=".06em">VISTA FRONTAL</text>
+        <text x="460" y="310" text-anchor="middle" font-size="11" fill="#888" font-weight="600" letter-spacing=".06em">VISTA LATERAL</text>
+      </svg>
+    </div>
+
+    <table class="dims avoid-break">
+      <thead>
+        <tr>
+          <th>IN (A)</th>
+          <th>Polos</th>
+          <th>A</th>
+          <th>E (mm)</th>
+          <th>G (mm)</th>
+          <th>L (mm)</th>
+          <th>K (Ø mm)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>32A</td>
+          <td>3 (2P+T)</td>
+          <td>&times;</td>
+          <td>57</td>
+          <td>93,5</td>
+          <td>139</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>32A</td>
+          <td>4 (3P+T)</td>
+          <td>&times;</td>
+          <td>57</td>
+          <td>90</td>
+          <td>134,5</td>
+          <td>29</td>
+        </tr>
+        <tr class="highlight-row">
+          <td class="highlight">32A</td>
+          <td class="highlight">5 (3P+N+T) ◄</td>
+          <td>&times;</td>
+          <td class="highlight">63,5</td>
+          <td>93,5</td>
+          <td>136,5</td>
+          <td class="highlight">32</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.5pt;color:#888;margin-bottom:8px">◄ Linha em destaque = configuração deste produto (5276/CK). Todas as dimensões em milímetros (mm).</p>
+
+    <hr class="divider">
+
+    <!-- ── DIFERENCIAIS TÉCNICOS ── -->
+    <div class="section-title">Diferenciais Técnicos</div>
+    <div class="diff-grid avoid-break">
+      <div class="diff-item">
+        <div class="diff-title">Núcleos Compactos</div>
+        <p class="diff-desc">Design e material garantem rendimento máximo aos valores nominais e resistem a esforços mecânicos e térmicos.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Bornes Integrados</div>
+        <p class="diff-desc">Formam uma só peça com buchas e pinos de contato, resultando em melhor continuidade e fixação dos condutores.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Pinos Niquelados</div>
+        <p class="diff-desc">Latão maciço niquelado — peça única. Contato perfeito, alta resistência à abrasão e oxidação. Pinos autocentrantes.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Pino Terra Prioritário</div>
+        <p class="diff-desc">Diâmetro maior: conecta antes e desconecta depois, garantindo máxima segurança em todas as manobras.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Carcaça Nylon 6.6</div>
+        <p class="diff-desc">Auto-extinguível, resistente à abrasão. Cor vermelha identifica a tensão 380&ndash;440V. Facilita manutenção.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-title">Passa-Cabo PG 21</div>
+        <p class="diff-desc">Hermeticidade perfeita ao condutor. Impede entrada de pó/água. Bitolas recomendadas: 6 a 10 mm².</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── CARACTERÍSTICAS ── -->
+    <div class="section-title">Características e Vantagens</div>
+    <div class="features-grid avoid-break">
+      <div class="feature-item"><span class="feature-check">✔</span> Facilidade de manutenção na troca de miolos</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Evita erros de inserção com tensões diferentes</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Não permite a inversão de polos</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Identificação de tensão pela cor (vermelho = 380V)</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Prensa-cabo evita que fios se soltem no contato</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Bitolas recomendadas: 6 mm² a 10 mm²</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Pinos maciços autocentrantes em latão niquelado</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Resistência a impactos: até &plusmn;6 joules nos ensaios</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Produção 100% interna (Nylon 6.6 injetado na fábrica)</div>
+      <div class="feature-item"><span class="feature-check">✔</span> Fabricado conforme NBR IEC 60309, CEE 17 e VDE 0623</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── CONFORMIDADE ── -->
+    <div class="section-title">Matéria Prima e Conformidade Normativa</div>
+    <div class="obs-grid avoid-break">
+      <div class="obs-box">
+        <h4>Matéria Prima</h4>
+        <p>Miolo e Carcaça injetados internamente em termoplástico Nylon 6.6 auto-extinguível (Poliamida). Todos os componentes plásticos e contatos de latão são produzidos na fábrica STRAHL, em conformidade com os requisitos regulamentares e estatutários pertinentes. Todo lote produzido é inspecionado e ensaiado com resultados registrados por pessoal competente.</p>
+      </div>
+      <div class="obs-box">
+        <h4>Conformidade Normativa</h4>
+        <div class="norm-badges">
+          <span class="norm-badge">NBR IEC 60309</span>
+          <span class="norm-badge">CEE 17</span>
+          <span class="norm-badge">VDE 0623</span>
+        </div>
+        <p>* IP: grau de proteção dos invólucros de materiais elétricos. Os dois primeiros algarismos são definidos conforme IEC 144 e IEC 529; o terceiro algarismo conforme o Anexo 1 da norma NFC 20 010.</p>
+        <p style="margin-top:6px;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888">Materiais Elétricos STRAHL</p>
+      </div>
+    </div>
+
+    <!-- ── RODAPÉ ── -->
+    <div class="ds-footer">
+      <div>
+        <strong>Materiais Elétricos STRAHL</strong> &nbsp;·&nbsp;
+        São Paulo, SP — Brasil &nbsp;·&nbsp;
+        11 2818-3838 &nbsp;·&nbsp; vendas@strahl.com
+      </div>
+      <div>
+        REF: 5276/CK &nbsp;·&nbsp; Rev. A &nbsp;·&nbsp; 2026 &nbsp;·&nbsp;
+        <strong>strahl.com</strong>
+      </div>
+    </div>
+
+  </div><!-- /sheet -->
+
+</body>
+</html>

@@ -36,6 +36,14 @@
     if (main) main.src = src;
   }
 
+  // ─── Datasheet image switcher (5276) ───
+  function ds5276SetImg(thumb, src) {
+    document.querySelectorAll('#page-datasheet-5276 .ds-thumb').forEach(function(t) { t.classList.remove('active'); });
+    thumb.classList.add('active');
+    var main = document.getElementById('ds-5276-main-photo');
+    if (main) main.src = src;
+  }
+
   // ─── Core page switcher ───
   function goTo(page) {
     closeMobileNav();
@@ -67,6 +75,7 @@
     var code = sku.textContent.trim();
     if (code === '3076/CK') goTo('datasheet');
     if (code === '4079/CK') goTo('datasheet-4079');
+    if (code === '5276/CK') goTo('datasheet-5276');
   });
 
   // ─── DS sub-nav buttons (with anchor scroll) ───
