@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!-- ══════════════════════════════════════════════════════════════
+     TEMPLATE — Ficha Técnica STRAHL Linha Cekton
+     ──────────────────────────────────────────────────────────────
+     COMO USAR:
+     1. Copie este arquivo para datasheet-{{CODIGO_PASTA}}-print.html
+     2. Substitua todos os {{PLACEHOLDER}} pelos valores do produto
+     3. Coloque as imagens em assets/images/cekton/{{CODIGO_PASTA}}/
+     4. Adicione a página ao index.html (ver CLAUDE.md)
+
+     PLACEHOLDERS:
+       {{CODIGO}}        ex: 5276/CK
+       {{CODIGO_PASTA}}  ex: 5276zCK  (sem barra, letra z maiúscula antes de CK)
+       {{CORRENTE}}      ex: 32A
+       {{POLOS}}         ex: 3P+N+T
+       {{N_POLOS}}       ex: 5
+       {{TENSAO}}        ex: 380-440V
+       {{COR}}           #c0392b = vermelho (380-440V) | #2e6da4 = azul (220-240V)
+       {{POSICAO_TERRA}} ex: 6h (inferior)
+       {{IP}}            ex: IP447
+       {{IK}}            ex: IK05
+       {{PG}}            ex: PG21
+       {{BITOLA_MIN}}    ex: 6
+       {{BITOLA_MAX}}    ex: 10
+       {{VARIANT_ID}}    ex: 2471  (Loja STRAHL)
+══════════════════════════════════════════════════════════════ -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Técnica — {{CODIGO}} · STRAHL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Barlow', sans-serif; font-size: 11pt; color: #1b1c1c; background: #fff; }
+    @page { size: A4 portrait; margin: 14mm 16mm 14mm 16mm; }
+    @media print {
+      .no-print { display: none !important; }
+      body { font-size: 9.5pt; }
+      a { text-decoration: none; color: inherit; }
+      .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+    }
+    /* Cores — substitua {{COR}} em todo o arquivo */
+    :root { --cor: {{COR}}; --cor-light: {{COR}}22; }
+    .page-wrap { max-width: 780px; margin: 0 auto; padding: 24px 0; }
+
+    /* ── Header ── */
+    .header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 14px; border-bottom: 3px solid var(--cor); margin-bottom: 20px; }
+    .header-logo { height: 36px; }
+    .header-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22pt; font-weight: 800; color: var(--cor); letter-spacing: -.02em; }
+    .header-sub { font-size: 9pt; color: #666; text-align: right; margin-top: 2px; }
+
+    /* ── Intro row ── */
+    .intro-row { display: flex; gap: 24px; margin-bottom: 20px; }
+    .intro-img { width: 200px; height: 200px; object-fit: contain; border: 1px solid #e8e8e8; border-radius: 6px; flex-shrink: 0; }
+    .intro-content { flex: 1; }
+    .intro-sku { font-family: 'Barlow Condensed', sans-serif; font-size: 28pt; font-weight: 800; color: var(--cor); line-height: 1; }
+    .intro-desc { font-size: 10.5pt; color: #444; margin: 6px 0 14px; line-height: 1.5; }
+
+    /* ── Specs grid ── */
+    .specs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
+    .spec-item { border: 1px solid #e0e0e0; border-radius: 5px; padding: 8px 10px; }
+    .spec-label { font-size: 7.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #888; margin-bottom: 3px; }
+    .spec-value { font-family: 'Barlow Condensed', sans-serif; font-size: 13.5pt; font-weight: 700; color: #1b1c1c; }
+
+    /* ── Badges IP/IK ── */
+    .badges { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 20px; font-size: 9pt; font-weight: 700; }
+    .badge-prot { background: var(--cor-light); color: var(--cor); border: 1px solid var(--cor)44; }
+
+    /* ── Sections ── */
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11pt; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #555; border-bottom: 1px solid #e0e0e0; padding-bottom: 5px; margin: 18px 0 10px; }
+
+    /* ── Drawing ── */
+    .drawing-box { border: 1px solid #d0d0d0; border-radius: 4px; padding: 16px; margin-bottom: 14px; text-align: center; }
+    .drawing-label { font-size: 8pt; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #888; margin-bottom: 12px; }
+    .drawing-box img { width: 100%; max-width: 500px; display: block; margin: 0 auto; }
+
+    /* ── Dims table ── */
+    .dims { width: 100%; border-collapse: collapse; font-size: 10pt; margin-bottom: 18px; }
+    .dims th { background: #1a2744; color: rgba(255,255,255,.85); padding: 7px 12px; font-size: 8.5pt; text-transform: uppercase; text-align: center; }
+    .dims td { padding: 7px 12px; text-align: center; border-bottom: 1px solid #eee; }
+    .dims tr.highlight td { background: var(--cor-light); font-weight: 700; color: var(--cor); }
+
+    /* ── Diferenciais / Features ── */
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; margin-bottom: 18px; }
+    .feature-item { display: flex; align-items: flex-start; gap: 7px; font-size: 9.5pt; line-height: 1.4; }
+    .feature-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cor); flex-shrink: 0; margin-top: 5px; }
+
+    /* ── Footer ── */
+    .footer { border-top: 1px solid #e0e0e0; padding-top: 10px; margin-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 8pt; color: #999; }
+    .footer strong { color: var(--cor); }
+
+    /* ── Print button ── */
+    .btn-print { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; background: var(--cor); color: #fff; border: none; border-radius: 5px; font-size: 10pt; font-weight: 700; cursor: pointer; margin-bottom: 20px; font-family: inherit; }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Botão imprimir — some no print -->
+  <div class="no-print" style="margin-bottom:16px">
+    <button class="btn-print" onclick="window.print()">⎙ Imprimir / Salvar PDF</button>
+  </div>
+
+  <!-- ── Cabeçalho ── -->
+  <div class="header avoid-break">
+    <img class="header-logo" src="../../assets/images/logo_strahl.svg" alt="STRAHL" onerror="this.style.display='none'">
+    <div style="text-align:right">
+      <div class="header-title">FICHA TÉCNICA</div>
+      <div class="header-sub">Linha Cekton — Plugues e Tomadas Industriais</div>
+    </div>
+  </div>
+
+  <!-- ── Intro: imagem + SKU + descrição + specs ── -->
+  <div class="intro-row avoid-break">
+    <img class="intro-img" src="../images/cekton/{{CODIGO_PASTA}}/imagem_{{CODIGO_PASTA}}-principal.jpg" alt="Plugue {{CODIGO}}">
+    <div class="intro-content">
+      <div class="intro-sku">{{CODIGO}}</div>
+      <div class="intro-desc">
+        Plugue Industrial Linha Cekton · {{CORRENTE}} · {{POLOS}} · {{TENSAO}}<br>
+        Posição terra {{POSICAO_TERRA}} · {{IP}} · {{IK}}
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item">
+          <div class="spec-label">Corrente</div>
+          <div class="spec-value">{{CORRENTE}}</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Polos</div>
+          <div class="spec-value">{{POLOS}}</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Tensão</div>
+          <div class="spec-value">{{TENSAO}}</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Proteção</div>
+          <div class="spec-value">{{IP}}</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Posição terra</div>
+          <div class="spec-value">{{POSICAO_TERRA}}</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Impacto</div>
+          <div class="spec-value">{{IK}}</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Entrada cabo</div>
+          <div class="spec-value">{{PG}}</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Bitola (mm²)</div>
+          <div class="spec-value">{{BITOLA_MIN}}–{{BITOLA_MAX}}</div>
+        </div>
+      </div>
+
+      <div class="badges">
+        <span class="badge badge-prot">✔ {{IP}}</span>
+        <span class="badge badge-prot">✔ {{IK}}</span>
+        <span class="badge badge-prot">✔ IEC 60309</span>
+        <span class="badge badge-prot">✔ NBR IEC 60309</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Galeria de fotos ── -->
+  <div class="section-title">Imagens do Produto</div>
+  <div style="display:flex;gap:10px;margin-bottom:18px" class="avoid-break">
+    <img src="../images/cekton/{{CODIGO_PASTA}}/imagem_{{CODIGO_PASTA}}-frente.jpg"   alt="Frente"   style="width:23%;border:1px solid #eee;border-radius:4px;object-fit:contain">
+    <img src="../images/cekton/{{CODIGO_PASTA}}/imagem_{{CODIGO_PASTA}}-lateral.jpg"  alt="Lateral"  style="width:23%;border:1px solid #eee;border-radius:4px;object-fit:contain">
+    <img src="../images/cekton/{{CODIGO_PASTA}}/imagem_{{CODIGO_PASTA}}-traseira.jpg" alt="Traseira" style="width:23%;border:1px solid #eee;border-radius:4px;object-fit:contain">
+    <img src="../images/cekton/{{CODIGO_PASTA}}/imagem_{{CODIGO_PASTA}}-principal.jpg" alt="Principal" style="width:23%;border:1px solid #eee;border-radius:4px;object-fit:contain">
+  </div>
+
+  <!-- ── Desenho técnico ── -->
+  <div class="section-title">Desenhos Técnicos e Dimensões (mm)</div>
+  <div class="drawing-box avoid-break">
+    <div class="drawing-label">Vista Técnica — {{CORRENTE}} · {{POLOS}} ({{N_POLOS}} Polos) · Posição Terra {{POSICAO_TERRA}}</div>
+    <img src="../images/cekton/{{CODIGO_PASTA}}/desenho_{{CODIGO_PASTA}}.png" alt="Desenho técnico {{CODIGO}}">
+  </div>
+
+  <!-- ── Tabela de dimensões ── -->
+  <!-- PREENCHER: adicionar todas as variações de polos disponíveis para este código -->
+  <!-- A linha do produto principal deve ter class="highlight" -->
+  <table class="dims avoid-break">
+    <thead>
+      <tr>
+        <th>IN (A)</th><th>Polos</th><th>A</th><th>E (mm)</th><th>G (mm)</th><th>L (mm)</th><th>K (Ø mm)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- EXEMPLO — substituir pelos valores reais da tabela do PDF de referência -->
+      <tr><td>{{CORRENTE}}</td><td>3</td><td>×</td><td>XX</td><td>XX</td><td>XX</td><td>XX</td></tr>
+      <tr><td>{{CORRENTE}}</td><td>4</td><td>×</td><td>XX</td><td>XX</td><td>XX</td><td>XX</td></tr>
+      <tr class="highlight"><td>{{CORRENTE}}</td><td>{{N_POLOS}}</td><td>×</td><td>XX</td><td>XX</td><td>XX</td><td>XX</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ── Diferenciais ── -->
+  <div class="section-title">Diferenciais</div>
+  <div class="feature-grid avoid-break">
+    <!-- PREENCHER: listar os diferenciais do produto -->
+    <div class="feature-item"><span class="feature-dot"></span><span>Corpo em poliamida de alta resistência</span></div>
+    <div class="feature-item"><span class="feature-dot"></span><span>Proteção {{IP}} contra poeira e água</span></div>
+    <div class="feature-item"><span class="feature-dot"></span><span>Resistência a impacto {{IK}}</span></div>
+    <div class="feature-item"><span class="feature-dot"></span><span>Entrada de cabo {{PG}} · {{BITOLA_MIN}}–{{BITOLA_MAX}} mm²</span></div>
+    <div class="feature-item"><span class="feature-dot"></span><span>Conforme IEC / NBR IEC 60309</span></div>
+    <div class="feature-item"><span class="feature-dot"></span><span><!-- adicionar diferencial --></span></div>
+  </div>
+
+  <!-- ── Conformidade ── -->
+  <div class="section-title">Conformidade e Normas</div>
+  <p style="font-size:9.5pt;color:#555;line-height:1.6;margin-bottom:18px">
+    Produto fabricado conforme <strong>IEC 60309</strong> e <strong>NBR IEC 60309</strong>.
+    Proteção mecânica <strong>{{IK}}</strong> e proteção contra poeira e água <strong>{{IP}}</strong> (IP 4 4 7 — NFC 20010).
+    <!-- Adicionar informações adicionais de norma se aplicável -->
+  </p>
+
+  <!-- ── Onde comprar ── -->
+  <div class="no-print" style="background:#f8f8f8;border:1px solid #e0e0e0;border-radius:6px;padding:14px 18px;margin-bottom:20px">
+    <div style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#888;margin-bottom:8px">Onde Comprar</div>
+    <a href="https://loja.strahl.com/tomadas-e-plugues-industriais-plugue-industrial-linha-cekton-ip44-strahl?variant_id={{VARIANT_ID}}"
+       target="_blank"
+       style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;background:{{COR}};color:#fff;border-radius:5px;font-weight:700;font-size:10pt;text-decoration:none">
+      Comprar na Loja STRAHL →
+    </a>
+  </div>
+
+  <!-- ── Rodapé ── -->
+  <div class="footer">
+    <div><strong>STRAHL</strong> — Materiais Elétricos Industriais · strahl.com</div>
+    <div>{{CODIGO}} · Linha Cekton</div>
+  </div>
+
+</div>
+</body>
+</html>
