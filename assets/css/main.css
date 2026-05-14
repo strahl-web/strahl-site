@@ -1662,19 +1662,22 @@
      SD VIEWER — toggle foto/desenho
   ═══════════════════════════════ */
 
+  /* Grid específica do bloco SD (desktop: viewer 480px + info) */
+  .cat-media-grid--sd { grid-template-columns: 480px 1fr; }
+
   /* Desktop: dois painéis lado a lado dentro do viewer */
   .sd-viewer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     border: 1px solid var(--gray-border);
+    overflow: hidden;
   }
-  .sd-viewer-tabs { display: none; } /* escondido no desktop */
+  .sd-viewer-tabs { display: none; }
   .sd-img-wrap {
     position: relative;
-    overflow: hidden;
     aspect-ratio: 1/1;
     background: var(--white);
+    overflow: hidden;
   }
   .sd-img-wrap + .sd-img-wrap { border-left: 1px solid var(--gray-border); }
   .sd-img-wrap img {
@@ -1707,49 +1710,65 @@
     text-transform: uppercase;
   }
 
-  /* Mobile: viewer ocupa largura total, tabs aparecem */
+  /* Mobile: viewer ocupa largura total, imagens naturais, tabs aparecem */
   @media (max-width: 820px) {
+    .cat-media-grid--sd { grid-template-columns: 1fr; }
+
     .sd-viewer {
       display: block;
       grid-column: 1 / -1;
-      border: none;
+      border: 1px solid var(--gray-border);
+      border-radius: 6px;
+      overflow: hidden;
     }
     .sd-viewer-tabs {
       display: flex;
-      gap: 6px;
-      padding: 10px 0 12px;
-      border-bottom: 1px solid var(--gray-border);
-      margin-bottom: 0;
+      gap: 0;
+      border-bottom: 2px solid var(--gray-border);
     }
     .sd-tab {
+      flex: 1;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 15px;
       text-transform: uppercase;
       letter-spacing: .06em;
-      padding: 8px 20px;
-      border: 2px solid var(--gray-border);
-      border-radius: 3px;
-      background: var(--white);
+      padding: 12px 8px;
+      border: none;
+      border-right: 1px solid var(--gray-border);
+      background: var(--gray-bg);
       color: var(--navy);
       cursor: pointer;
-      transition: background .15s, color .15s, border-color .15s;
+      transition: background .15s, color .15s;
     }
+    .sd-tab:last-child { border-right: none; }
     .sd-tab.active {
       background: var(--navy);
       color: var(--white);
-      border-color: var(--navy);
     }
+    /* Imagens em mobile: largura total, altura automática, sem position:absolute */
     .sd-img-wrap {
+      aspect-ratio: auto;
       width: 100%;
-      aspect-ratio: 1/1;
-      border: 1px solid var(--gray-border);
+      overflow: hidden;
+    }
+    .sd-img-wrap img {
+      position: static;
+      width: 100%;
+      height: auto;
+      max-height: 80vw;
+      object-fit: contain;
+      padding: 16px;
+      display: block;
     }
     .sd-img-wrap + .sd-img-wrap {
-      border-left: 1px solid var(--gray-border);
-      display: none; /* o segundo painel começa oculto */
+      border-left: none;
+      border-top: 1px solid var(--gray-border);
+      display: none;
     }
     .sd-img-wrap.sd-active { display: block; }
+    .sd-img-label { position: static; background: var(--navy); padding: 6px 12px; }
+    .sd-img-label--top { background: var(--gray-bg); color: var(--text-muted); }
   }
 
   /* Wrapper universal para rolagem horizontal em tabelas */
