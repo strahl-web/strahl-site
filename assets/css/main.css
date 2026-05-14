@@ -1914,7 +1914,7 @@
   @media (max-width: 820px) {
     .cat-media-grid { grid-template-columns: 1fr 1fr; }
     .cat-media-slot.slot-info { grid-column: 1 / -1; border-right: none; border-top: 1px solid var(--gray-border); }
-    .cat-spec-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    /* Scroll tratado pelo wrapper div — display:block quebraria position:sticky nas células */
   }
   @media (max-width: 480px) {
     .cat-media-grid { grid-template-columns: 1fr; }
