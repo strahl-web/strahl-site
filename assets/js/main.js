@@ -55,6 +55,26 @@
     if (target) target.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     document.querySelectorAll('.nav-dropdown').forEach(function(d) { d.classList.remove('open'); });
+
+    // Atualiza sublinhado ativo no nav
+    document.querySelectorAll('.nav-link').forEach(function(l) { l.classList.remove('active'); });
+    var navMap = {
+      'home': null,
+      'cekton': 'nav-plugues',
+      'datasheet': 'nav-plugues',
+      'datasheet-4079': 'nav-plugues',
+      'datasheet-5276': 'nav-plugues',
+      'mining-termoplastica': 'nav-plugues',
+      'mining-ultrarresistente': 'nav-plugues',
+      'mining-altacorrente': 'nav-plugues',
+      'schuko': 'nav-plugues',
+      'unidades-combinadas': 'nav-uc'
+    };
+    var navId = navMap[page];
+    if (navId) {
+      var navEl = document.getElementById(navId);
+      if (navEl) navEl.classList.add('active');
+    }
   }
 
   // ─── Dropdown toggle on click ───
