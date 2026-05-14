@@ -1188,7 +1188,7 @@
     .footer-bottom { padding: 20px; font-size: 11px; }
 
     /* LINHA CEKTON */
-    .linha-hero { padding: 40px 0 32px; min-height: auto; }
+    .linha-hero { padding: 40px 0 32px; min-height: 420px; }
     .linha-hero-inner { grid-template-columns: 1fr; gap: 24px; }
     .linha-hero h1 { font-size: 44px; }
     .linha-hero-img { display: flex; justify-content: center; }
