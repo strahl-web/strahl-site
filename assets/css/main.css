@@ -1204,6 +1204,9 @@
     /* Scroll horizontal em tabelas */
     .ip-block { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     table.sel-table { min-width: 540px; }
+    /* cat-spec-table: scroll automático em qualquer wrapper */
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table.cat-spec-table { min-width: 560px; }
     /* Alta Corrente: tabelas de 3 colunas cabem sem scroll */
     .ampere-block table.sel-table { min-width: 0; }
 
@@ -1655,30 +1658,40 @@
   .cat-info-pills .dif-pill { font-size: 11px; }
 
   /* Tabela de seleção: Código | Características | Medidas */
+  /* Wrapper universal para rolagem horizontal em tabelas */
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 6px;
+  }
+
   table.cat-spec-table {
     width: 100%;
+    min-width: 560px;
     border-collapse: collapse;
     font-size: 13px;
   }
-  table.cat-spec-table thead tr { background: var(--gray-mid); }
+  table.cat-spec-table thead tr { background: var(--navy); }
   table.cat-spec-table thead th {
-    padding: 10px 16px;
+    padding: 12px 18px;
     text-align: left;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .08em;
-    color: var(--navy);
-    border-right: 1px solid var(--gray-border);
+    color: rgba(255,255,255,.85);
+    border-right: 1px solid rgba(255,255,255,.10);
   }
   table.cat-spec-table thead th:last-child { border-right: none; }
-  table.cat-spec-table tbody tr { border-bottom: 1px solid var(--gray-border); }
+  table.cat-spec-table tbody tr { border-bottom: 1px solid var(--gray-border); transition: background .12s; }
   table.cat-spec-table tbody tr:last-child { border-bottom: none; }
   table.cat-spec-table tbody tr:nth-child(even) { background: #fafafa; }
+  table.cat-spec-table tbody tr:hover { background: #f0f4ff; }
   table.cat-spec-table tbody td {
-    padding: 10px 16px;
-    vertical-align: top;
+    padding: 12px 18px;
+    vertical-align: middle;
     border-right: 1px solid var(--gray-border);
+    line-height: 1.4;
   }
   table.cat-spec-table tbody td:last-child { border-right: none; }
   /* coluna Código */
