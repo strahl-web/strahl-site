@@ -1793,15 +1793,29 @@
     line-height: 1.4;
   }
   table.cat-spec-table tbody td:last-child { border-right: none; }
-  /* coluna Código */
+  /* coluna Código — sticky ao rolar horizontalmente */
+  table.cat-spec-table thead th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    background: var(--navy);
+    box-shadow: 2px 0 6px rgba(0,0,0,.15);
+  }
   table.cat-spec-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 14px;
     color: var(--navy);
     white-space: nowrap;
     width: 160px;
+    background: var(--white);
+    box-shadow: 2px 0 6px rgba(0,0,0,.07);
   }
+  table.cat-spec-table tbody tr:nth-child(even) td:first-child { background: #fafafa; }
+  table.cat-spec-table tbody tr:hover td:first-child { background: #f0f4ff; }
   /* coluna Medidas */
   table.cat-spec-table tbody td:last-child {
     font-size: 12px;
@@ -1889,6 +1903,7 @@
     transition: all .2s;
     letter-spacing: .04em;
   }
+  table.cat-spec-table td a.sku-code { white-space: nowrap; }
   table.cat-spec-table td a.sku-code:hover { background: var(--red); color: var(--white); border-color: var(--red); }
   table.cat-spec-table td a.sku-code.featured { background: var(--red); color: var(--white); border-color: var(--red); }
 
