@@ -120,6 +120,17 @@
     }
   });
 
+  // ─── SD Viewer: toggle foto/desenho (Unidades Combinadas) ───
+  function sdToggle(btn, showId, hideId) {
+    var viewer = btn.closest('.sd-viewer');
+    viewer.querySelectorAll('.sd-tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+    var show = document.getElementById(showId);
+    var hide = document.getElementById(hideId);
+    if (show) { show.classList.add('sd-active'); show.style.display = ''; }
+    if (hide) { hide.classList.remove('sd-active'); hide.style.display = 'none'; }
+  }
+
 // Datasheet: troca imagem principal com ID customizado
 function dsSetImgCustom(imgId, thumb, src) {
   var el = document.getElementById(imgId);

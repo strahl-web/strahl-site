@@ -6675,30 +6675,33 @@
           <span class="cat-code-pill">Série SD-35 / SD-36</span>
         </div>
 
-        <!-- Foto + Desenho + Info — 3 colunas -->
-        <div class="cat-media-grid" style="grid-template-columns:240px 240px 1fr">
+        <!-- Foto + Desenho + Info — viewer com toggle mobile -->
+        <div class="cat-media-grid" style="grid-template-columns:480px 1fr">
 
-          <!-- FOTO PRINCIPAL
-               Substituir: salvar novo arquivo como SD-3536.jpg
-               na pasta assets/images/unidadescombinadas/ -->
-          <div style="position:relative;overflow:hidden;aspect-ratio:1/1;background:#fff;border:1px solid var(--gray-border)">
-            <img src="assets/images/unidadescombinadas/SD-3536.jpg"
-                 alt="Caixa com Tomada e Disjuntor STRAHL SD-3536"
-                 style="width:100%;height:100%;object-fit:contain;object-position:center;display:block;position:absolute;inset:0;padding:12px;box-sizing:border-box">
-            <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(23,32,65,.80) 0%,transparent 100%)">
-              <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;color:var(--white);letter-spacing:.04em">SD-3536</div>
+          <!-- VIEWER: toggle entre Foto e Desenho -->
+          <div class="sd-viewer">
+
+            <!-- Tabs — visíveis só no mobile -->
+            <div class="sd-viewer-tabs">
+              <button class="sd-tab active" onclick="sdToggle(this,'sd-foto-main','sd-draw-main')">SD-3536</button>
+              <button class="sd-tab" onclick="sdToggle(this,'sd-draw-main','sd-foto-main')">Desenho</button>
             </div>
-          </div>
 
-          <!-- DESENHO TÉCNICO
-               Substituir: salvar novo arquivo como SD-3536-desenho.jpg
-               na pasta assets/images/unidadescombinadas/ -->
-          <div style="position:relative;overflow:hidden;aspect-ratio:1/1;background:#fff;border:1px solid var(--gray-border);border-left:none">
-            <img src="assets/images/unidadescombinadas/SD-3536-desenho.jpg"
-                 alt="Desenho técnico SD-3536"
-                 style="width:100%;height:100%;object-fit:contain;object-position:center;display:block;position:absolute;inset:0;padding:12px;box-sizing:border-box">
-            <div style="position:absolute;top:6px;left:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted)">Desenho Técnico</div>
-          </div>
+            <!-- FOTO PRINCIPAL -->
+            <div class="sd-img-wrap" id="sd-foto-main">
+              <img src="assets/images/unidadescombinadas/SD-3536.jpg"
+                   alt="Caixa com Tomada e Disjuntor STRAHL SD-3536">
+              <div class="sd-img-label">SD-3536</div>
+            </div>
+
+            <!-- DESENHO TÉCNICO -->
+            <div class="sd-img-wrap" id="sd-draw-main">
+              <img src="assets/images/unidadescombinadas/SD-3536-desenho.jpg"
+                   alt="Desenho técnico SD-3536">
+              <div class="sd-img-label sd-img-label--top">Desenho</div>
+            </div>
+
+          </div><!-- /sd-viewer -->
 
           <!-- PAINEL DE INFORMAÇÕES -->
           <div class="cat-media-slot slot-info">
