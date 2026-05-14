@@ -13,10 +13,13 @@
     var isOpen = nav.style.display === 'flex';
     nav.style.display = isOpen ? 'none' : 'flex';
     document.body.classList.toggle('nav-open', !isOpen);
+    if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
   }
   function closeMobileNav() {
     var nav = document.getElementById('mobile-nav');
+    var btn = document.getElementById('nav-toggle');
     if (nav) nav.style.display = 'none';
+    if (btn) btn.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('nav-open');
   }
 

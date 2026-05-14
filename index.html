@@ -3,12 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>STRAHL | Protótipo — Home · Linha Cekton · Datasheet 3076/CK</title>
+<title>STRAHL — Materiais Elétricos Industriais | Plugues e Tomadas Industriais</title>
+<meta name="description" content="STRAHL: fabricante brasileiro de materiais elétricos industriais desde 1986. Plugues e tomadas industriais certificados para indústria, mineração e construção civil.">
+<meta property="og:title" content="STRAHL — Materiais Elétricos Industriais">
+<meta property="og:description" content="Fabricante brasileiro de plugues e tomadas industriais certificados. Linha Cekton, Mining Block e Alta Corrente — de 16A a 630A.">
+<meta property="og:type" content="website">
+<!-- Preconnect para fontes (elimina round-trips) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- Ícones: arquivos SVG locais em assets/images/icons/ -->
 <link rel="stylesheet" href="assets/css/main.css">
+<!-- Schema.org: dados estruturados para buscas e AI Overviews -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "STRAHL",
+  "description": "Fabricante brasileiro de materiais elétricos industriais — plugues, tomadas e quadros de distribuição desde 1986.",
+  "foundingDate": "1986",
+  "contactPoint": { "@type": "ContactPoint", "telephone": "+55-11-2818-3838", "contactType": "vendas", "availableLanguage": "Portuguese" }
+}
+</script>
 </head>
 <body>
+<!-- Skip link: permite usuários de teclado/leitor de tela pular a navegação -->
+<a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
 
 <!-- ══════════════ SHARED HEADER ══════════════ -->
 <header>
@@ -49,7 +68,7 @@
       </a>
       <img src="assets/images/icons/shopping_cart.svg" class="icon icon-navy" style="width:22px;height:22px;cursor:pointer">
     </div>
-    <button class="nav-hamburger" id="nav-toggle" onclick="toggleMobileNav()" aria-label="Menu">
+    <button class="nav-hamburger" id="nav-toggle" onclick="toggleMobileNav()" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -112,6 +131,8 @@
     </a>
   </div>
 </div>
+
+<main id="main-content">
 
 <!-- ══════════════ PAGE: HOME ══════════════ -->
 <div class="page active" id="page-home">
@@ -3851,7 +3872,7 @@
 </div><!-- /page-mining-altacorrente -->
 
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js" defer></script>
 
 <!-- ══════════════ PAGE: DATASHEET 4079/CK ══════════════ -->
 <div class="page" id="page-datasheet-4079">
@@ -5698,6 +5719,7 @@
 
 </div><!-- /page-schuko -->
 
+</main><!-- /#main-content -->
 
 </body>
 </html>
