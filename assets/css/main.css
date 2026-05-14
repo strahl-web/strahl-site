@@ -1657,15 +1657,21 @@
   }
   .cat-info-pills .dif-pill { font-size: 11px; }
 
-  /* Tabela de seleção: Código | Características | Medidas */
+  /* ═══════════════════════════════════════════════════
+     GRIDS RESPONSIVAS — variantes de 2 colunas
+     Inline styles bloqueavam media queries; usar classes.
+  ═══════════════════════════════════════════════════ */
+  .cat-media-grid--2col    { grid-template-columns: 320px 1fr; }
+  .cat-media-grid--2col-sm { grid-template-columns: 240px 1fr; }
+
   /* ═══════════════════════════════
      SD VIEWER — toggle foto/desenho
   ═══════════════════════════════ */
 
-  /* Grid específica do bloco SD (desktop: viewer 480px + info) */
+  /* Desktop: viewer ocupa 480px, info ocupa o restante */
   .cat-media-grid--sd { grid-template-columns: 480px 1fr; }
 
-  /* Desktop: dois painéis lado a lado dentro do viewer */
+  /* Desktop: dois painéis lado a lado, tabs ocultas */
   .sd-viewer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1673,6 +1679,7 @@
     overflow: hidden;
   }
   .sd-viewer-tabs { display: none; }
+  .sd-tab { display: none; }
   .sd-img-wrap {
     position: relative;
     aspect-ratio: 1/1;
@@ -1690,68 +1697,29 @@
     padding: 12px;
     box-sizing: border-box;
   }
-  .sd-img-label {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: 8px 12px;
-    background: linear-gradient(to top, rgba(23,32,65,.80) 0%, transparent 100%);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 15px;
-    color: var(--white);
-    letter-spacing: .04em;
-  }
-  .sd-img-label--top {
-    top: 0; bottom: auto;
-    background: linear-gradient(to bottom, rgba(23,32,65,.70) 0%, transparent 100%);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .10em;
-    text-transform: uppercase;
-  }
 
-  /* Mobile: viewer ocupa largura total, imagens naturais, tabs aparecem */
+  /* Mobile SD viewer: imagem full-width, tabs na base como barra de navegação */
   @media (max-width: 820px) {
-    .cat-media-grid--sd { grid-template-columns: 1fr; }
+    .cat-media-grid--sd,
+    .cat-media-grid--2col,
+    .cat-media-grid--2col-sm { grid-template-columns: 1fr; }
 
     .sd-viewer {
-      display: block;
-      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
       border: 1px solid var(--gray-border);
       border-radius: 6px;
       overflow: hidden;
     }
-    .sd-viewer-tabs {
-      display: flex;
-      gap: 0;
-      border-bottom: 2px solid var(--gray-border);
-    }
-    .sd-tab {
-      flex: 1;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      padding: 12px 8px;
-      border: none;
-      border-right: 1px solid var(--gray-border);
-      background: var(--gray-bg);
-      color: var(--navy);
-      cursor: pointer;
-      transition: background .15s, color .15s;
-    }
-    .sd-tab:last-child { border-right: none; }
-    .sd-tab.active {
-      background: var(--navy);
-      color: var(--white);
-    }
-    /* Imagens em mobile: largura total, altura automática, sem position:absolute */
     .sd-img-wrap {
       aspect-ratio: auto;
       width: 100%;
-      overflow: hidden;
+      position: static;
+      background: var(--white);
     }
+    .sd-img-wrap + .sd-img-wrap { display: none; border-left: none; }
+    .sd-img-wrap.sd-active { display: block; }
     .sd-img-wrap img {
       position: static;
       width: 100%;
@@ -1759,16 +1727,34 @@
       max-height: 80vw;
       object-fit: contain;
       padding: 16px;
+      box-sizing: border-box;
       display: block;
     }
-    .sd-img-wrap + .sd-img-wrap {
-      border-left: none;
-      border-top: 1px solid var(--gray-border);
-      display: none;
+    /* Tabs aparecem na base do viewer como barra navy */
+    .sd-viewer-tabs {
+      display: flex;
+      background: var(--navy);
+      border-top: none;
+      order: 10;
     }
-    .sd-img-wrap.sd-active { display: block; }
-    .sd-img-label { position: static; background: var(--navy); padding: 6px 12px; }
-    .sd-img-label--top { background: var(--gray-bg); color: var(--text-muted); }
+    .sd-tab {
+      display: block;
+      flex: 1;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding: 11px 8px;
+      border: none;
+      border-right: 1px solid rgba(255,255,255,.15);
+      background: transparent;
+      color: rgba(255,255,255,.55);
+      cursor: pointer;
+      transition: color .15s;
+    }
+    .sd-tab:last-child { border-right: none; }
+    .sd-tab.active { color: var(--white); font-weight: 900; }
   }
 
   /* Wrapper universal para rolagem horizontal em tabelas */

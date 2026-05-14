@@ -5924,7 +5924,7 @@
         </div>
 
         <!-- Foto principal + Painel de specs -->
-        <div class="cat-media-grid" style="grid-template-columns:320px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col">
 
           <!-- FOTO PRINCIPAL DA LINHA
                Substituir: salvar novo arquivo como 3095_Splash.jpg
@@ -6118,7 +6118,7 @@
         </div>
 
         <!-- Foto principal + Painel de specs -->
-        <div class="cat-media-grid" style="grid-template-columns:320px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col">
 
           <!-- FOTO PRINCIPAL DA LINHA
                Substituir: salvar novo arquivo como UC-3055z04e05.jpg
@@ -6248,7 +6248,7 @@
         </div>
 
         <!-- Foto principal + Painel de specs -->
-        <div class="cat-media-grid" style="grid-template-columns:320px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col">
 
           <!-- FOTO PRINCIPAL DA LINHA
                Substituir: salvar novo arquivo como UC-3045z04.jpg
@@ -6378,7 +6378,7 @@
         </div>
 
         <!-- Foto principal + Painel de specs -->
-        <div class="cat-media-grid" style="grid-template-columns:320px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col">
 
           <!-- FOTO PRINCIPAL DA LINHA
                Substituir: salvar novo arquivo como UC-3853zB.jpg
@@ -6473,7 +6473,7 @@
           <span class="cat-code-pill">Série QD-ANDAR</span>
         </div>
 
-        <div class="cat-media-grid" style="grid-template-columns:320px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col">
 
           <!-- FOTO PRINCIPAL DA LINHA
                Substituir: salvar novo arquivo como QD-ANDARz01.jpg
@@ -6562,7 +6562,7 @@
           <span class="cat-code-pill">NBR 17018 · Séries 3207 / 3855</span>
         </div>
 
-        <div class="cat-media-grid" style="grid-template-columns:320px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col">
 
           <!-- FOTO PRINCIPAL DA LINHA
                Substituir: salvar novo arquivo como 3207z04.jpg
@@ -6681,24 +6681,22 @@
           <!-- VIEWER: toggle entre Foto e Desenho -->
           <div class="sd-viewer">
 
-            <!-- Tabs — visíveis só no mobile -->
-            <div class="sd-viewer-tabs">
-              <button class="sd-tab active" onclick="sdToggle(this,'sd-foto-main','sd-draw-main')">SD-3536</button>
-              <button class="sd-tab" onclick="sdToggle(this,'sd-draw-main','sd-foto-main')">Desenho</button>
-            </div>
-
-            <!-- FOTO PRINCIPAL -->
-            <div class="sd-img-wrap" id="sd-foto-main">
+            <!-- FOTO PRINCIPAL (ativa por padrão) -->
+            <div class="sd-img-wrap sd-active" id="sd-foto-main">
               <img src="assets/images/unidadescombinadas/SD-3536.jpg"
                    alt="Caixa com Tomada e Disjuntor STRAHL SD-3536">
-              <div class="sd-img-label">SD-3536</div>
             </div>
 
             <!-- DESENHO TÉCNICO -->
             <div class="sd-img-wrap" id="sd-draw-main">
               <img src="assets/images/unidadescombinadas/SD-3536-desenho.jpg"
                    alt="Desenho técnico SD-3536">
-              <div class="sd-img-label sd-img-label--top">Desenho</div>
+            </div>
+
+            <!-- Tabs na base do viewer — visíveis só no mobile -->
+            <div class="sd-viewer-tabs">
+              <button class="sd-tab active" onclick="sdToggle(this,'sd-foto-main','sd-draw-main')">SD-3536</button>
+              <button class="sd-tab" onclick="sdToggle(this,'sd-draw-main','sd-foto-main')">Desenho</button>
             </div>
 
           </div><!-- /sd-viewer -->
@@ -6811,7 +6809,7 @@
           <span class="cat-code-pill">Disjuntor Padrão Europeu · DIN</span>
         </div>
 
-        <div class="cat-media-grid" style="grid-template-columns:240px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col-sm">
 
           <!-- FOTO PRINCIPAL
                Substituir: salvar novo arquivo como CD-3046.jpg
@@ -6946,7 +6944,7 @@
           <span class="cat-code-pill">Trilho DIN · Série SD</span>
         </div>
 
-        <div class="cat-media-grid" style="grid-template-columns:240px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col-sm">
 
           <!-- FOTO PRINCIPAL
                Substituir: salvar novo arquivo como SD-3046.jpg
@@ -7081,7 +7079,7 @@
           <span class="cat-code-pill">Padrão · Customizado</span>
         </div>
 
-        <div class="cat-media-grid" style="grid-template-columns:320px 1fr">
+        <div class="cat-media-grid cat-media-grid--2col">
 
           <!-- FOTO PRINCIPAL DA LINHA
                Substituir: salvar novo arquivo como MontagemRobo.jpg
